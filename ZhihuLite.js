@@ -31,21 +31,39 @@
     return $done({});
   }
 
+  const original = $response.body;
+  // A detection-only view exposes escaped keys/labels. Keep escaped quotes,
+  // backslashes and controls intact so they cannot hide a token boundary.
+  // HTML escapes for &, < and > cannot occur in a recognized key/label; leave
+  // them untouched to avoid copying large bodies just to inspect their signals.
+  // False positives only cost work; all edits still use parsed original JSON.
+  const signals = original.includes("\\u") ? original.replace(/\\u(?!0026|003[cCeE])([0-9a-fA-F]{4})/g, (escape, hex) => {
+    const code = parseInt(hex, 16);
+    return code < 32 || code === 34 || code === 92 ? escape : String.fromCharCode(code);
+  }) : original;
+  const scanAds = !isConfig &&
+    /"(?:ad_info|adjson|ad_json|ad_list|advert_info|adverts|third_business|float_search_word|atmosphere_voting_config|continuous_consumption_module|is_ad|is_advert|ad|promotion_extra)"\s*:|"(?:type|resource_type|card_type|business_type)"\s*:\s*"[^"\\]*(?:ad|sponsor|promot|\\)|"panel_text"\s*:\s*"(?:[^"\\]*\\|\s*(?:广告|推广|赞助)\s*")/i.test(signals);
+  const interestRoute = (host === "api" && path.startsWith("/moments")) || path === "/next-bff" || path === "/next-data";
+  const scanInterest = interestRoute && /为您推荐|为你推荐|你可能感兴趣|推荐的相关内容/.test(signals);
+  const scanSurfaces = !isConfig && potentialSurfaceChange(signals);
+  const scanNetwork = isConfig && /httpdns|dnsParser|quic|coreNetworkConf_useTars|networkExprimentList|tars_ab_list|zaSetExtraRequestHeader/i.test(signals);
+  if (!scanAds && !scanInterest && !scanSurfaces && !scanNetwork) return $done({});
+
+  const adFields = new Set(["ad_info", "adjson", "ad_json", "ad_list", "advert_info", "adverts", "third_business", "float_search_word", "atmosphere_voting_config", "continuous_consumption_module"]);
   const count = { ads: 0, recommendations: 0, fields: 0, network: 0 };
   try {
     // Keep 64-bit answer/video IDs exact while changing unrelated JSON fields.
-    const codec = protectIntegers($response.body);
+    const codec = protectIntegers(original);
     const data = JSON.parse(codec.text);
     if (!data || typeof data !== "object") return $done({});
     if (isConfig) {
       cleanNetworkConfig(data);
     } else {
-      cleanRecommendationModules(data);
-      cleanKeleeSurfaces(data);
-      cleanContent(data);
+      if (scanInterest) cleanRecommendationModules(data);
+      if (scanSurfaces) cleanKeleeSurfaces(data);
+      if (scanAds) cleanContent(data);
     }
     if (!Object.values(count).some(n => n > 0)) {
-      console.log("[知乎去广告] " + category() + "：已检查，无需修改");
       return $done({});
     }
     const body = codec.restore(JSON.stringify(data));
@@ -75,11 +93,12 @@
   }
   function isAd(item) {
     if (!item || typeof item !== "object" || Array.isArray(item)) return false;
-    if ([true, 1, "1"].includes(item.is_ad) || [true, 1, "1"].includes(item.is_advert)) return true;
-    if ([item.type, item.resource_type, item.card_type, item.business_type].some(adType)) return true;
-    if ([item.adjson, item.ad_json, item.ad, item.promotion_extra].some(meaningful)) return true;
+    if (item.is_ad === true || item.is_ad === 1 || item.is_ad === "1" ||
+        item.is_advert === true || item.is_advert === 1 || item.is_advert === "1") return true;
+    if (adType(item.type) || adType(item.resource_type) || adType(item.card_type) || adType(item.business_type)) return true;
+    if (meaningful(item.adjson) || meaningful(item.ad_json) || meaningful(item.ad) || meaningful(item.promotion_extra)) return true;
     const origin = item.origin_data;
-    if (origin && [origin.type, origin.resource_type, origin.card_type].some(adType)) return true;
+    if (origin && (adType(origin.type) || adType(origin.resource_type) || adType(origin.card_type))) return true;
     const elements = item.common_card && item.common_card.footline && item.common_card.footline.elements;
     return Array.isArray(elements) && elements.some(element => {
       const label = element && element.text && element.text.panel_text;
@@ -131,24 +150,40 @@
   }
   function cleanContent(node) {
     if (!node || typeof node !== "object") return;
-    const adFields = ["ad_info", "adjson", "ad_json", "ad_list", "advert_info", "adverts", "third_business", "float_search_word", "atmosphere_voting_config", "continuous_consumption_module"];
     for (const key of Object.keys(node)) {
-      if (adFields.includes(key)) {
+      if (adFields.has(key)) {
         delete node[key];
         count.fields++;
         continue;
       }
       const value = node[key];
       if (Array.isArray(value)) {
-        node[key] = value.filter(item => {
-          if (isAd(item)) { count.ads++; return false; }
+        let kept = 0;
+        for (let index = 0; index < value.length; index++) {
+          const item = value[index];
+          if (isAd(item)) { count.ads++; continue; }
           cleanContent(item);
-          return true;
-        });
+          if (kept !== index) value[kept] = item;
+          kept++;
+        }
+        if (kept !== value.length) value.length = kept;
       } else {
         cleanContent(value);
       }
     }
+  }
+  function potentialSurfaceChange(body) {
+    if (/^\/(?:answers|articles|pins)\/v\d+\/\d+$/.test(path) ||
+        /^\/(?:api\/)?v\d+\/(?:answers|articles)\/\d+$/.test(path)) {
+      return /"(?:ring_info|interaction_bar_plugins)"\s*:|"type"\s*:\s*"card"/.test(body);
+    }
+    if (host !== "api") return false;
+    if (path === "/topstory/recommend") return body.includes('"ring"');
+    if (/^\/podcasts\/hub\/v\d+$/.test(path)) return body.includes('"banners"');
+    if (/^\/search\/recommend_query\/v\d+$/.test(path)) return body.includes('"queries"');
+    if (/^\/search_v\d+$/.test(path)) return body.includes('"pendant"');
+    if (path === "/people/self") return /"(?:right_button|entrance_v2)"/.test(body);
+    return false;
   }
   function cleanKeleeSurfaces(data) {
     const drop = (owner, keys) => {
@@ -217,18 +252,33 @@
     });
   }
   function protectIntegers(text) {
+    const unchanged = { text, restore: result => result };
+    if (!/(?:^|[:,\[])\s*-?\d{16}/.test(text)) return unchanged;
+    const numbers = [];
+    const tokens = /"(?:\\.|[^"\\])*"|(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)/g;
+    let match;
+    // Record only unsafe integer spans; ordinary strings/numbers are never copied.
+    while ((match = tokens.exec(text)) !== null) {
+      const token = match[1];
+      if (token && token.length >= 16 && !/[.eE]/.test(token) && !Number.isSafeInteger(Number(token)) &&
+          token[0] !== "0" && !token.startsWith("-0")) {
+        numbers.push({ start: match.index, end: tokens.lastIndex, token });
+      }
+    }
+    if (!numbers.length) return unchanged;
     let prefix = "__ZHILITE_NUMBER_";
-    while (text.includes(prefix)) prefix += "_";
-    const originals = [];
-    // Consume quoted strings whole; only unquoted integer tokens are protected.
-    const encoded = text.replace(/"(?:\\.|[^"\\])*"|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g, token => {
-      if (!/^-?\d+$/.test(token) || Number.isSafeInteger(Number(token))) return token;
-      originals.push(token);
-      return '"' + prefix + (originals.length - 1) + '__"';
-    });
+    while (signals.includes(prefix)) prefix += "_";
+    const parts = [];
+    let previous = 0;
+    for (let index = 0; index < numbers.length; index++) {
+      const number = numbers[index];
+      parts.push(text.slice(previous, number.start), '"' + prefix + index + '__"');
+      previous = number.end;
+    }
+    parts.push(text.slice(previous));
     return {
-      text: encoded,
-      restore: result => result.replace(new RegExp('"' + prefix + '(\\d+)__"', "g"), (_, index) => originals[Number(index)])
+      text: parts.join(""),
+      restore: result => result.replace(new RegExp('"' + prefix + '(\\d+)__"', "g"), (_, index) => numbers[Number(index)].token)
     };
   }
 })();

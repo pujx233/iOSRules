@@ -148,6 +148,61 @@ test('64-bit IDs and literal marker strings survive script cleanup exactly', () 
   assert.equal(JSON.parse(result).data[0].text, JSON.parse(input).data[0].text);
 });
 
+test('signal gates preserve escaped keys, labels, types and quoted boundaries', () => {
+  const variants = value => {
+    const plain = JSON.stringify(value);
+    const unicode = plain.replace(/"(?:\\.|[^"\\])*"/g, token => '"' +
+      JSON.parse(token).split('').map(char => '\\u' + char.charCodeAt(0).toString(16).padStart(4, '0')).join('') + '"');
+    return [plain, unicode, JSON.stringify(value, null, 2)];
+  };
+  const ordinary = { type: 'answer', content: '正文保留' };
+  for (const ad of [
+    { type: 'AdCard' }, { resource_type: 'feed_advert' }, { business_type: 'sponsored_item' },
+    { type: 'prefix"_ad' }, { type: 'prefix\\_ad' }, { type: 'prefix\n_ad' },
+    { type: 'prefix&_ad' }, { type: 'prefix<_ad' }, { type: 'prefix>_ad' },
+    { is_ad: '1' }, { is_advert: true }, { promotion_extra: { enabled: true } },
+    { origin_data: { card_type: 'ad-item' } },
+    { common_card: { footline: { elements: [{ text: { panel_text: '\t广告\n' } }] } } }
+  ]) {
+    for (const input of variants({ data: [ordinary, ad] })) {
+      assert.deepEqual(JSON.parse(run(feedURL, input).body), { data: [ordinary] });
+    }
+  }
+  const interest = { type: 'ComponentCard', extra: { business_ext_map: { moments_biz_data: { action_text: '发布了文章 · 你可能感兴趣' } } } };
+  for (const input of variants({ data: [ordinary, interest], ad_info: {} })) {
+    assert.deepEqual(JSON.parse(run(feedURL, input).body), { data: [ordinary] });
+  }
+  for (const input of variants({ structured_content: { segments: [{ type: 'card' }, { type: 'text' }] }, ring_info: {} })) {
+    assert.deepEqual(JSON.parse(run(root + '/answers/v2/123', input).body), { structured_content: { segments: [{ type: 'text' }] } });
+  }
+  for (const input of variants({ data: { configs: [{ configKey: 'sugarQuicConfig' }, { configKey: 'theme', configValue: { HTTPDNS: 1, color: 'blue' } }] } })) {
+    assert.deepEqual(JSON.parse(run('https://m-cloud.zhihu.com/api/cloud/zhihu/config/all', input).body), { data: { configs: [{ configKey: 'theme', configValue: { color: 'blue' } }] } });
+  }
+});
+
+test('clean responses bypass JSON parsing and keep their original bytes', () => {
+  for (const url of [feedURL, root + '/topstory/hot-lists/total', 'https://m-cloud.zhihu.com/api/cloud/zhihu/config/all']) {
+    let parses = 0, result;
+    const input = '{ "data": [], "text": "\\u666e\\u901a\\u5185\\u5bb9", "keep": 9223372036854775807 }';
+    vm.runInNewContext(source, {
+      $request: { url }, $response: { body: input }, $done: value => { result = value; },
+      JSON: { parse(text) { parses++; return JSON.parse(text); }, stringify: JSON.stringify },
+      console: { log() {} }
+    });
+    assert.equal(parses, 0);
+    assert.deepEqual(JSON.parse(JSON.stringify(result)), {});
+  }
+});
+
+test('integer protection handles escaped marker collisions, arrays and invalid tokens', () => {
+  const input = '{"data":[{"type":"answer","ids":[9007199254740993,-9223372036854775808],"marker":"\\u005f\\u005fZHILITE_NUMBER_0__","decimal":1.2345678901234567,"quoted":"x:9223372036854775807"}],"ad_info":{}}';
+  const body = run(feedURL, input).body;
+  assert.ok(body.includes('"ids":[9007199254740993,-9223372036854775808]'));
+  assert.equal(JSON.parse(body).data[0].marker, '__ZHILITE_NUMBER_0__');
+  assert.equal(JSON.parse(body).data[0].quoted, 'x:9223372036854775807');
+  assert.deepEqual(run(feedURL, '{"id":01234567890123456789,"ad_info":{}}'), {});
+});
+
 test('invalid and unchanged responses fail open', () => {
   for (const input of ['', '<html>error</html>', 'null', 'true', '{"data":null}', '{"data":[]}']) assert.deepEqual(run(feedURL, input), {});
   assert.deepEqual(run('https://example.com/moments_v3', { data: [{ type: 'ad' }] }), {});
