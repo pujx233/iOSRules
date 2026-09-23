@@ -1,15 +1,14 @@
 #!name=知乎去广告
-#!desc=清理已知广告与兴趣推荐卡片。精简开启时只保留关注，移除推荐、热榜、圈子等标签；当前冷启动仍可能白屏，手动点关注可恢复。关闭精简恢复完整导航，已有广告过滤继续生效。
-#!author=pujx233
-#!homepage=https://github.com/pujx233/Stash
+#!desc=移除HTTPDNS和QUIC传输配置，清理开屏、信息流、回答正文及底部广告，移除已知推广卡片、评论氛围调查和会员推广入口；过滤“你可能感兴趣”等推荐卡片，保留原生首页标签和排序。
 #!openUrl=https://apps.apple.com/app/id432274380
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhihu.png
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag=去广告
+#!system=
+#!system_version=
 #!loon_version=3.4.0(962)
-#!date=2026-09-08
-
-[Argument]
-simplify = switch,true,tag=知乎精简,desc=只保留关注，当前冷启动仍可能白屏。关闭后恢复完整导航，去广告仍生效。
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhihu.png
+#!date=2026-06-01 17:11:35
 
 [Rewrite]
 ^https:\/\/(?:api|www)\.zhihu\.com\/commercial_api\/ reject-dict
@@ -17,8 +16,22 @@ simplify = switch,true,tag=知乎精简,desc=只保留关注，当前冷启动�
 ^https:\/\/api\.zhihu\.com\/(?:ad-style-service\/request|fringe\/ad)(?:[/?]|$) reject-dict
 ^https:\/\/api\.zhihu\.com\/.*\/featured-comment-ad(?:[/?]|$) reject-dict
 
+# 可莉规则中的搜索推广、直答引导与个人页推广入口。
+^https:\/\/api\.zhihu\.com\/search\/preset_words(?:\?|$) reject-dict
+^https:\/\/api\.zhihu\.com\/search\/related_queries\/question\/\d+(?:\?|$) reject-dict
+^https:\/\/zhida\.zhihu\.com\/ai_ingress\/knowledge\/square\/categories\/feeds\?categoryId=1%7D$ reject-dict
+^https:\/\/zhida\.zhihu\.com\/ai_ingress\/ai_chat\/guidance(?:\?|$) reject-dict
+^https:\/\/www\.zhihu\.com\/api\/v\d+\/members\/homepage_card(?:\?|$) reject-dict
+^https:\/\/api\.zhihu\.com\/people\/homepage_entry_v\d+(?:\?|$) reject-dict
+^https:\/\/api\.zhihu\.com\/kvip\/right\/my_card(?:\?|$) reject-dict
+^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card\/v\d+(?:\?|$) reject-dict
+
+# 已经通过同一回答的实机画面和改写前后 HAR 验证，仅移除明确的广告项。
+^https:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations(?:\?|$) response-body-json-jq 'if (.data | type) == "array" then .data |= map(select(if type == "object" then .type != "ad" else true end)) else . end'
+
 [Script]
-http-response ^https:\/\/(?:api|www|page-info|zhuanlan|m-cloud)\.zhihu\.com\/(?:root\/tab\/v\d+|moments(?:_v\d+)?(?:\?|$)|moments\/(?:recommend|timeline)(?:\?|$)|topstory\/(?:recommend|hot-lists)|questions\/\d+\/feeds|(?:answers|articles|pins)\/v\d+\/\d+|(?:api\/)?v\d+\/(?:questions|answers|articles)\/|next-(?:bff|data|render)(?:\?|$)|comment_v\d+\/|api\/cloud\/zhihu\/config\/all) script-path=https://raw.githubusercontent.com/pujx233/Stash/main/ZhihuLite.js?v=6eeee36aebae,requires-body=true,timeout=10,tag=知乎去广告·内容清理,argument=[{simplify}]
+http-response ^https:\/\/(?:api|www|page-info|zhuanlan)\.zhihu\.com\/(?!api\/v4\/answers\/\d+\/recommendations(?:[?#]|$))(?:moments(?:_v\d+)?(?:\?|$)|moments\/(?:recommend|timeline)(?:\?|$)|topstory\/(?:recommend|hot-lists)(?:[/?]|$)|questions\/\d+\/feeds(?:[/?]|$)|(?:answers|articles|pins)\/v\d+\/\d+(?:[/?]|$)|(?:api\/)?v\d+\/(?:questions|answers|articles)\/|next-(?:bff|data|render)(?:\?|$)|comment_v\d+\/|podcasts\/hub\/v\d+(?:\?|$)|search\/recommend_query\/v\d+(?:\?|$)|search_v\d+(?:\?|$)|people\/self(?:\?|$)) script-path=https://raw.githubusercontent.com/pujx233/Stash/main/ZhihuLite.js?v=6bde7b40700f,requires-body=true,timeout=10,tag=知乎去广告·内容清理
+http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all(?:\?|$) script-path=https://raw.githubusercontent.com/pujx233/Stash/main/ZhihuLite.js?v=6bde7b40700f,requires-body=true,timeout=10,tag=知乎去广告·网络配置
 
 [Mitm]
-hostname=api.zhihu.com,www.zhihu.com,page-info.zhihu.com,zhuanlan.zhihu.com,m-cloud.zhihu.com
+hostname=api.zhihu.com,www.zhihu.com,page-info.zhihu.com,zhuanlan.zhihu.com,m-cloud.zhihu.com,zhida.zhihu.com

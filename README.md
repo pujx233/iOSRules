@@ -5,9 +5,24 @@
 - 哔哩哔哩去广告 Debug:
   `loon://import?plugin=https://raw.githubusercontent.com/pujx233/Stash/refs/heads/main/Bilibili_remove_ads_debug.lpx`
 
-- **知乎精简**：[一键导入 Loon](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FStash%2Fmain%2FZhihuLite.lpx) · [插件源码](./ZhihuLite.lpx) · [处理脚本](./ZhihuLite.js)
-  - 拦截开屏广告、活动浮层，清理关注、推荐、回答及评论中的广告字段和广告卡片。
-  - 「知乎精简」开关默认开启：首页只保留关注，精选请求切换到最新时间线。关闭该开关后，去广告继续生效。
-  - 首次安装、更新或切换开关后，请完全关闭知乎再打开；首次进入关注页选择「最新」，以保留按钮选中状态。
-  - 与其他知乎去广告插件选择其一启用，避免规则相互覆盖。
-  - 接口参考：[可莉的知乎去广告规则](https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx)、[fmz200 的知乎脚本](https://github.com/fmz200/wool_scripts/blob/main/Scripts/zhihu/zhihu.js)。
+- **知乎去广告**：[一键导入 Loon](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FStash%2Fmain%2FZhihuLite.lpx) · [LPX](./ZhihuLite.lpx) · [处理脚本](./ZhihuLite.js)
+  - 清理开屏、关注/推荐信息流、回答和评论广告；过滤回答正文底部 `recommendations` 接口中明确标记为 `ad` 的卡片。
+  - 固定移除关注流中“你可能感兴趣”“为你推荐”等插入卡片，与去广告一起执行，无需配置开关。
+  - 合入可莉规则所覆盖的 HTTPDNS/QUIC 配置、正文推广卡片、圈子卡片、评论调查、搜索推广、直答引导和会员推广入口清理。
+  - 保留原生首页标签、默认页和排序；旧版单关注布局及启动配置实验已移除。
+  - 保留普通回答、付费内容和分页；脚本保护 64 位整数，遇到不能安全处理的响应时保留原文。
+  - 导入或更新后完全关闭知乎再打开。使用这份合并版时，停用其他知乎去广告插件；此前单独添加的回答底部补充规则也可删除，避免重复维护。
+
+### 知乎规则来源与维护范围
+
+这是本仓库维护的合并版，沿用可莉的名称、署名、主页、图标等头部展示信息；功能说明对应本版行为。可莉相关规则以既有源码副本为对照，其头部日期为 `2026-06-01 17:11:35`，不是本仓库的更新日期，也不表示已同步其最新版本。
+
+参考：[可莉知乎规则](https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx)、[fmz200 知乎脚本](https://github.com/fmz200/wool_scripts/blob/main/Scripts/zhihu/zhihu.js)、[Loon Rewrite 文档](https://nsloon.app/docs/Rewrite/)。
+
+广告和兴趣推荐采用明确标识及已知卡片位置过滤。首页标签、搜索标签、下一回答中的正常内容保留；不使用整条推荐流拒绝或仅允许单一卡片类型的策略。
+
+### 验证
+
+运行 `node ZhihuLite.test.js`，需要 Node.js 和 jq。测试使用合成样本，覆盖兴趣卡片、普通/付费回答、分页、64 位整数、网络配置、原生导航保留和 LPX 匹配范围。
+
+回答底部规则已单独通过实机验证：同一回答的原始响应含 1 张广告，Loon 处理后为 0 张，其余字段及分页一致，页面正文和评论正常。合并版另用本地历史抓包回放；不把离线结果视为所有广告位置的实机验收。私有 HAR、账号信息及原始响应不提交到仓库。

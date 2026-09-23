@@ -1,10 +1,8 @@
-// 知乎去广告 2026-09-08：单关注标签的布局开关对照，尚待实机验证。
+// 知乎去广告：广告清理与兴趣推荐过滤，保留原生首页导航和排序。
 // API coverage informed by Kelee's Zhihu_remove_ads.lpx and fmz200's zhihu.js.
 // No account data is stored or sent by this script.
 (() => {
   "use strict";
-  const args = typeof $argument === "object" && $argument ? $argument : {};
-  const simplify = ![false, "false", 0, "0"].includes(args.simplify);
   const url = $request.url || "";
   const match = /^https:\/\/([a-z0-9-]+)\.zhihu\.com(\/[^?#]*)(?:[?#]|$)/i.exec(url);
   if (!match) return $done({});
@@ -13,8 +11,9 @@
 
   if (typeof $response === "undefined") return $done({});
 
-  const isTabs = host === "api" && /^\/root\/tab\/v\d+$/.test(path);
   const isConfig = host === "m-cloud" && path === "/api/cloud/zhihu/config/all";
+  // This endpoint uses the separately verified native Rewrite in the LPX.
+  if (host === "www" && /^\/api\/v4\/answers\/\d+\/recommendations$/.test(path)) return $done({});
   const isContent = ["api", "www", "page-info", "zhuanlan"].includes(host) && (
     /^\/moments(?:_v\d+)?$/.test(path) ||
     /^\/moments\/(?:recommend|timeline)$/.test(path) ||
@@ -23,30 +22,26 @@
     /^\/(?:answers|articles|pins)\/v\d+\/\d+(?:\/|$)/.test(path) ||
     /^\/(?:api\/)?v\d+\/(?:questions|answers|articles)\//.test(path) ||
     /^\/next-(?:bff|data|render)$/.test(path) ||
-    /^\/comment_v\d+\//.test(path)
+    /^\/comment_v\d+\//.test(path) ||
+    (host === "api" && (/^\/podcasts\/hub\/v\d+$/.test(path) ||
+      /^\/search\/recommend_query\/v\d+$/.test(path) ||
+      /^\/search_v\d+$/.test(path) || path === "/people/self"))
   );
-  if ((!isTabs && !isConfig && !isContent) || !$response.body || typeof $response.body !== "string") {
+  if ((!isConfig && !isContent) || !$response.body || typeof $response.body !== "string") {
     return $done({});
   }
 
-  const count = { ads: 0, recommendations: 0, fields: 0, tabs: 0, network: 0 };
+  const count = { ads: 0, recommendations: 0, fields: 0, network: 0 };
   try {
     // Keep 64-bit answer/video IDs exact while changing unrelated JSON fields.
     const codec = protectIntegers($response.body);
     const data = JSON.parse(codec.text);
     if (!data || typeof data !== "object") return $done({});
-    if (isTabs) {
-      if (simplify && Array.isArray(data.tab_list)) {
-        if (data.tab_list.some(tab => tab && tab.tab_type === "follow")) {
-          const tabs = data.tab_list.filter(tab => tab && tab.tab_type === "follow");
-          count.tabs = data.tab_list.length - tabs.length;
-          data.tab_list = tabs;
-        }
-      }
-    } else if (isConfig) {
+    if (isConfig) {
       cleanNetworkConfig(data);
     } else {
-      if (simplify) cleanRecommendationModules(data);
+      cleanRecommendationModules(data);
+      cleanKeleeSurfaces(data);
       cleanContent(data);
     }
     if (!Object.values(count).some(n => n > 0)) {
@@ -54,7 +49,7 @@
       return $done({});
     }
     const body = codec.restore(JSON.stringify(data));
-    console.log("[知乎去广告] " + category() + "：广告条目=" + count.ads + "，推荐模块=" + count.recommendations + "，广告字段=" + count.fields + "，标签=" + count.tabs + "，网络配置=" + count.network);
+    console.log("[知乎去广告] " + category() + "：广告条目=" + count.ads + "，推荐模块=" + count.recommendations + "，广告字段=" + count.fields + "，网络配置=" + count.network);
     return $done({ body });
   } catch (_) {
     console.log("[知乎去广告] 响应无法安全处理，已保留原文");
@@ -62,7 +57,6 @@
   }
 
   function category() {
-    if (isTabs) return "首页标签";
     if (isConfig) return "知乎网络配置";
     if (path.startsWith("/moments")) return "关注信息流";
     if (path.startsWith("/comment_")) return "评论区";
@@ -156,6 +150,49 @@
       }
     }
   }
+  function cleanKeleeSurfaces(data) {
+    const drop = (owner, keys) => {
+      if (!owner || typeof owner !== "object") return;
+      for (const key of keys) {
+        if (Object.prototype.hasOwnProperty.call(owner, key)) {
+          delete owner[key];
+          count.fields++;
+        }
+      }
+    };
+    const keep = (owner, key, predicate) => {
+      if (!owner || !Array.isArray(owner[key])) return;
+      owner[key] = owner[key].filter(item => {
+        if (predicate(item)) return true;
+        count.fields++;
+        return false;
+      });
+    };
+    // Apply card/promotion cleanup only at Kelee's known response boundaries.
+    // Keep normal topstory and next-render entries instead of rejecting their stream.
+    if (/^\/(?:answers|articles|pins)\/v\d+\/\d+$/.test(path) ||
+        /^\/(?:api\/)?v\d+\/(?:answers|articles)\/\d+$/.test(path)) {
+      drop(data, ["third_business", "ring_info", "interaction_bar_plugins"]);
+      if (/\/answers\//.test(path)) {
+        drop(data, ["float_search_word"]);
+        keep(data.structured_content, "segments", item => !item || item.type !== "card");
+      }
+    }
+    if (host !== "api") return;
+    if (path === "/topstory/recommend" && Array.isArray(data.data)) {
+      for (const item of data.data) keep(item, "children", child => !child || child.id !== "ring");
+    } else if (/^\/podcasts\/hub\/v\d+$/.test(path)) {
+      drop(data, ["banners"]);
+    } else if (/^\/search\/recommend_query\/v\d+$/.test(path)) {
+      keep(data.recommend_queries, "queries", item => item && item.type === "normal");
+    } else if (/^\/search_v\d+$/.test(path)) {
+      drop(data, ["pendant"]);
+    } else if (path === "/people/self") {
+      const vip = data.vip_info;
+      drop(vip && vip.entrance_new, ["right_button"]);
+      drop(vip, ["entrance_v2"]);
+    }
+  }
   function cleanNetworkConfig(data) {
     if (!data.data || !Array.isArray(data.data.configs)) return;
     const remove = new Set([
@@ -167,14 +204,6 @@
     ]);
     data.data.configs = data.data.configs.filter(config => {
       if (!config || typeof config !== "object") return true;
-      // Native telemetry confirms ZHTopBarPageView.viewControllerAtIndex
-      // runs out of bounds after caching the single Follow tab.
-      // Controlled test: disable the observed left-move feature via its status;
-      // configValue is not the on/off gate. Client behavior still needs validation.
-      if (simplify && config.configKey === "follow_tab_is_move_left" && config.status === true) {
-        config.status = false;
-        count.network++;
-      }
       if (remove.has(config.configKey)) { count.network++; return false; }
       if (config.configValue && typeof config.configValue === "object") {
         for (const key of ["delayHttpdns", "dnsParser", "HTTPDNS"]) {
