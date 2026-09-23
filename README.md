@@ -5,6 +5,13 @@
 - 哔哩哔哩去广告 Debug:
   `loon://import?plugin=https://raw.githubusercontent.com/pujx233/Stash/refs/heads/main/Bilibili_remove_ads_debug.lpx`
 
+- **FotMob去广告**：[一键导入 Loon](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FStash%2Fmain%2FFotMobLite.lpx) · [下载 LPX](https://raw.githubusercontent.com/pujx233/Stash/main/FotMobLite.lpx) · [图标](./icons/FotMob.jpg)
+  - 两条原生规则：精确拦截 FotMob 专用 Nimbus 广告域名，将 `/prod/pub/houseads` 自家推广接口返回为空列表；无脚本、无开关。
+  - 补充现有通用去广告规则，清理会员、Predict、通知、社交账号和游戏推广；只需解密 `pub.fotmob.com`。要求 Loon 3.5.1 (978) 或更新版本。
+  - 已通过 iPhone 镜像和抓包验证：首页、比赛详情推广消失，比分、积分榜、新闻正常。部分广告位仍留白，不保证覆盖所有地区及其他广告 SDK。
+  - 导入后完全关闭 FotMob 再打开。此前在主配置中添加的两条 `FotMob 去广告` 规则，可在插件启用后删除，避免重复维护。
+  - 图标取自 [FotMob 官方 App Store 页面](https://apps.apple.com/app/id488575683)，随本仓库保存；私有抓包、原始配置和账号信息不包含在插件中。
+
 - **知乎去广告**：[一键导入 Loon](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FStash%2Fmain%2FZhihuLite.lpx) · [LPX](./ZhihuLite.lpx) · [处理脚本](./ZhihuLite.js)
   - 清理开屏、关注/推荐信息流、回答和评论广告；过滤回答正文底部 `recommendations` 接口中明确标记为 `ad` 的卡片。
   - 固定移除关注流中“你可能感兴趣”“为你推荐”等插入卡片，与去广告一起执行，无需配置开关。
