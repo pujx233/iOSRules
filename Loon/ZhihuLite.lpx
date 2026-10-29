@@ -7,7 +7,7 @@
 #!system_version=
 #!loon_version=3.4.0(962)
 #!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhihu.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Zhihu.png
 #!date=2026-06-01 17:11:35
 
 [Rewrite]
@@ -21,8 +21,8 @@
 ^https:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations(?:\?|$) response-body-json-jq 'if (.data | type) == "array" then .data |= map(select(if type == "object" then .type != "ad" else true end)) else . end'
 
 [Script]
-http-response ^https:\/\/(?:api|www|page-info|zhuanlan)\.zhihu\.com\/(?!api\/v4\/answers\/\d+\/recommendations(?:[?#]|$))(?:moments(?:_v\d+)?(?:\?|$)|moments\/(?:recommend|timeline)(?:\?|$)|topstory\/(?:recommend|hot-lists)(?:[/?]|$)|questions\/\d+\/feeds(?:[/?]|$)|(?:answers|articles|pins)\/v\d+\/\d+(?:[/?]|$)|(?:api\/)?v\d+\/(?:questions|answers|articles)\/|next-(?:bff|data|render)(?:\?|$)|comment_v\d+\/|podcasts\/hub\/v\d+(?:\?|$)|search\/recommend_query\/v\d+(?:\?|$)|search_v\d+(?:\?|$)|people\/self(?:\?|$)) script-path=https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/ZhihuLite.js,requires-body=true,timeout=10,tag=知乎去广告·内容清理
-http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all(?:\?|$) script-path=https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/ZhihuLite.js,requires-body=true,timeout=10,tag=知乎去广告·网络配置
+http-response ^https:\/\/(?:api|www|page-info|zhuanlan)\.zhihu\.com\/(?!api\/v4\/answers\/\d+\/recommendations(?:[?#]|$))(?:moments(?:_v\d+)?(?:\?|$)|moments\/(?:recommend|timeline)(?:\?|$)|topstory\/(?:recommend|hot-lists)(?:[/?]|$)|questions\/\d+\/feeds(?:[/?]|$)|(?:answers|articles|pins)\/v\d+\/\d+(?:[/?]|$)|(?:api\/)?v\d+\/(?:questions|answers|articles)\/|next-(?:bff|data|render)(?:\?|$)|comment_v\d+\/|podcasts\/hub\/v\d+(?:\?|$)|search\/recommend_query\/v\d+(?:\?|$)|search_v\d+(?:\?|$)|people\/self(?:\?|$)) script-path=https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/ZhihuLite.js?v=5cb6d15f86a0,requires-body=true,timeout=10,tag=知乎去广告·内容清理
+http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all(?:\?|$) script-path=https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/ZhihuLite.js?v=5cb6d15f86a0,requires-body=true,timeout=10,tag=知乎去广告·网络配置
 
 [Mitm]
 hostname=api.zhihu.com,www.zhihu.com,page-info.zhihu.com,zhuanlan.zhihu.com,m-cloud.zhihu.com,zhida.zhihu.com
