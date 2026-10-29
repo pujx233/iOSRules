@@ -1,0 +1,21 @@
+#!name=插件仓库
+#!desc=一站式插件仓库任君选择，一键安装，方便快捷。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
+#!openUrl=https://🎈.com
+#!author=Peng-YM[https://github.com/Peng-YM]
+#!tag=插件管理
+#!system=
+#!system_version=
+#!loon_version=3.5.1(998)
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Loon.png
+#!date=2026-10-02 13:57:49
+
+[Rule]
+DOMAIN, loon-plugin.vercel.app, PROXY
+DOMAIN, raw.githubusercontent.com, PROXY
+
+[Script]
+request if ${url} ~= /^https?:\/\/xn--ck8h\.com/i then script("https://raw.githubusercontent.com/Loon0x00/Loon-Gallery/master/backend/gallery.js") with tag="Loon插件仓库", timeout=120, requires_body=true
+
+[MitM]
+hostname=xn--ck8h.com

@@ -1,0 +1,17 @@
+#!name=FotMob去广告
+#!desc=拦截 FotMob 专用 Nimbus 广告请求，清空会员、Predict、通知、社交账号及游戏推广列表；纯原生规则，无脚本。部分广告位仍会保留空白。
+#!openUrl=https://apps.apple.com/app/id488575683
+#!author=pujx233
+#!tag=去广告
+#!loon_version=3.5.1(978)
+#!homepage=https://raw.githubusercontent.com/pujx233/iOSRules/main/Loon/FotMobLite.lpx
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FotMob.jpg
+
+[Rule]
+DOMAIN,fotmobas-fotmobsoccerlivescores.adsbynimbus.com,REJECT
+
+[Rewrite]
+request if ${url} ~= /^https:\/\/pub\.fotmob\.com\/prod\/pub\/houseads(?:\?|$)/ then reject_array(200)
+
+[Mitm]
+hostname=pub.fotmob.com

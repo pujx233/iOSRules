@@ -1,0 +1,28 @@
+#!name=知乎去广告
+#!desc=移除HTTPDNS和QUIC传输配置，清理开屏、信息流、回答正文及底部广告，移除已知推广卡片、评论氛围调查和会员推广入口；过滤“你可能感兴趣”等推荐卡片，保留原生首页标签和排序。
+#!openUrl=https://apps.apple.com/app/id432274380
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag=去广告
+#!system=
+#!system_version=
+#!loon_version=3.4.0(962)
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Zhihu.png
+#!date=2026-06-01 17:11:35
+
+[Rewrite]
+# 相同动作的广告与推广请求合并匹配，减少重复 URL 规则检查。
+^https:\/\/(?:api|www)\.zhihu\.com\/commercial_api\/ reject-dict
+^https:\/\/api\.zhihu\.com\/(?:content-distribution-core\/bubble\/common\/show(?:\?|$)|(?:ad-style-service\/request|fringe\/ad)(?:[/?]|$)|search\/preset_words(?:\?|$)|search\/related_queries\/question\/\d+(?:\?|$)|people\/homepage_entry_v\d+(?:\?|$)|kvip\/right\/my_card(?:\?|$)|unlimited\/go\/my_card\/v\d+(?:\?|$)|.*\/featured-comment-ad(?:[/?]|$)) reject-dict
+^https:\/\/zhida\.zhihu\.com\/ai_ingress\/(?:knowledge\/square\/categories\/feeds\?categoryId=1%7D$|ai_chat\/guidance(?:\?|$)) reject-dict
+^https:\/\/www\.zhihu\.com\/api\/v\d+\/members\/homepage_card(?:\?|$) reject-dict
+
+# 已经通过同一回答的实机画面和改写前后 HAR 验证，仅移除明确的广告项。
+^https:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations(?:\?|$) response-body-json-jq 'if (.data | type) == "array" then .data |= map(select(if type == "object" then .type != "ad" else true end)) else . end'
+
+[Script]
+http-response ^https:\/\/(?:api|www|page-info|zhuanlan)\.zhihu\.com\/(?!api\/v4\/answers\/\d+\/recommendations(?:[?#]|$))(?:moments(?:_v\d+)?(?:\?|$)|moments\/(?:recommend|timeline)(?:\?|$)|topstory\/(?:recommend|hot-lists)(?:[/?]|$)|questions\/\d+\/feeds(?:[/?]|$)|(?:answers|articles|pins)\/v\d+\/\d+(?:[/?]|$)|(?:api\/)?v\d+\/(?:questions|answers|articles)\/|next-(?:bff|data|render)(?:\?|$)|comment_v\d+\/|podcasts\/hub\/v\d+(?:\?|$)|search\/recommend_query\/v\d+(?:\?|$)|search_v\d+(?:\?|$)|people\/self(?:\?|$)) script-path=https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/ZhihuLite.js,requires-body=true,timeout=10,tag=知乎去广告·内容清理
+http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all(?:\?|$) script-path=https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/ZhihuLite.js,requires-body=true,timeout=10,tag=知乎去广告·网络配置
+
+[Mitm]
+hostname=api.zhihu.com,www.zhihu.com,page-info.zhihu.com,zhuanlan.zhihu.com,m-cloud.zhihu.com,zhida.zhihu.com

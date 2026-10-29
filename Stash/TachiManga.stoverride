@@ -1,0 +1,21 @@
+name: TachiManga去广告
+desc: TachiManga去广告
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1054.png
+
+http:
+  mitm:
+    - "googleads.g.doubleclick.net"
+  rewrite:
+    - ^https?:\/\/googleads\.g\.doubleclick\.net - reject
+  script:
+    - match: ^https?:\/\/[\w-]+\.googlevideo\.com\/.+$
+      name: reject-tachimanga-requests
+      type: request  
+      require-body: false
+      timeout: 10
+
+script-providers:
+  reject-tachimanga-requests:
+    url: "https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/reject-tachimanga-requests.js"
+    interval: 86400
