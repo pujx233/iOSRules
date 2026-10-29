@@ -204,30 +204,3 @@ Loon 知乎使用 [ZhihuLite.js](Script/ZhihuLite.js) 自用版本；FotMob 为�
 | 转转去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FZhuanZhuan_remove_ads.lpx) | [LPX](Loon/ZhuanZhuan_remove_ads.lpx) | — |
 | 纵横小说去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FZongHeng_remove_ads.lpx) | [LPX](Loon/ZongHeng_remove_ads.lpx) | — |
 | 最右去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FZuiYou_remove_ads.lpx) | [LPX](Loon/ZuiYou_remove_ads.lpx) | — |
-
-
-## 引用检查（2026-10-30）
-
-已检查仓库内脚本、jq、图标及 README 导入链接；内部目标均存在。
-知乎 JS、FotMob 规则及 FotMob 图标与整理前一致，知乎脚本 URL 保留内容哈希版本参数。
-Stash 合集曾误指向部分可莉裁剪版，现按原来源绑定完整脚本，未改变原规则与 provider 名称。
-
-`Script/Upstream/` 中已删除的原项目文件取自删除前提交；RuCu6/QuanX 文件取自
-[axtyet/Luminous 历史快照](https://github.com/axtyet/Luminous/tree/4854294487f07f07368d9811573c484e82d3939c/RuCu6)。
-Maasea YouTube 保留同一提交的 request/response beta 配对。这些文件为历史存档，未验证当前 App 版本兼容性。
-
-以下原有外部脚本仍不可下载，保留原地址以避免换成不对应的实现：
-
-| 配置 | 失效来源 | 检查结果 |
-| --- | --- | --- |
-| Loon/Initium.lpx | ddgksf2013/MoYu：DuanChuanMeiProCrack.js | 404 |
-| Loon/youtube.lpx | rucu6.pages.dev：YouTube request.js、response.js | 404 |
-| Stash/AppRemoveAd.stoverride | ddgksf2013/MoYu：suishouji.js | 404 |
-| Stash/AppRemoveAd.stoverride | zirawell/app_remove_ads：51job.js | 404 |
-| Stash/AppRemoveAd.stoverride | RuCu6/QuanX：zhihu.js | 404 |
-| Stash/AppRemoveAd.stoverride | Yu9191/Rewrite：Qidian_my.js | 404 |
-| Stash/AppRemoveAd.stoverride | fmz200/wool_scripts：didi/didi.js | 404 |
-| Stash/AppRemoveAd.stoverride | GitLab lodepuly/vpn_tool：Umetrip_remove_ads.js | 403 |
-
-Stash 合集里的旧知乎来源与 Loon 的自用 ZhihuLite 相互独立；上表的知乎失效项不影响 Loon 自用插件下载。
-茶颜悦色备份脚本内的一张替换图片仍引用已无法解析的 kelee.one；所有插件声明的图标均已通过下载检查。
