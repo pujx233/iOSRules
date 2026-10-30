@@ -6,8 +6,8 @@
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
-#!homepage=https://hub.kelee.one
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QQMusic.png
+#!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/QQMusic_remove_ads.lpx
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QQMusic.png
 #!date=2026-10-02 13:57:49
 
 [Rule]
@@ -22,3 +22,14 @@ DOMAIN, monitor.music.qq.com, REJECT
 DOMAIN, tmead.y.qq.com, REJECT
 DOMAIN, tmeadbak.y.qq.com, REJECT
 DOMAIN, tmeadquic.y.qq.com, REJECT
+DOMAIN, otheve.beacon.qq.com, REJECT
+DOMAIN, stat.y.qq.com, REJECT
+DOMAIN, oth.str.mdt.qq.com, REJECT
+DOMAIN, h.trace.qq.com, REJECT
+DOMAIN, sdk.e.qq.com, REJECT
+DOMAIN, p.l.qq.com, REJECT
+DOMAIN, us.l.qq.com, REJECT
+DOMAIN, tangram.e.qq.com, REJECT
+DOMAIN-SUFFIX, imtmp.net, REJECT
+DOMAIN, stat6.y.qq.com, REJECT
+DOMAIN, ads.privacy.qq.com, REJECT
