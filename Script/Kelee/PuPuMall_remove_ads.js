@@ -14,37 +14,17 @@ const adv = "/advertisement/v1";
 
 if (url.indexOf(mine) != -1) {
   obj.data = [];
-  body = JSON.stringify(obj);
-  $done({body});
-}
-
-if (url.indexOf(search) != -1) {
+} else if (url.indexOf(search) != -1) {
   obj.data = [];
-  body = JSON.stringify(obj);
-  $done({body});
-}
-
-if (url.indexOf(search_hot) != -1) {
+} else if (url.indexOf(search_hot) != -1) {
   obj.data = [];
-  body = JSON.stringify(obj);
-  $done({body});
-}
-
-if (url.indexOf(recommend) != -1) {
+} else if (url.indexOf(recommend) != -1) {
   obj.data = obj.data.filter(item => item.filename !== "RecommendProduct.29e31893.js");
-  body = JSON.stringify(obj);
-  $done({body});
-}
-
-if (url.indexOf(recommendPro) != -1) {
+} else if (url.indexOf(recommendPro) != -1) {
   //obj.data = {};
   obj.data.activities = [];
   obj.data.products = [];
-  body = JSON.stringify(obj);
-  $done({body});
-}
-
-if (url.indexOf(adv) != -1) {
+} else if (url.indexOf(adv) != -1) {
   obj.data = obj.data.filter(item => ![30,50,90,320,100].includes(item.region_code)); 
 
   obj.data = obj.data.map(item => {  
@@ -56,12 +36,10 @@ if (url.indexOf(adv) != -1) {
     return item;  
   });
   
-  body = JSON.stringify(obj);
-  $done({body});
+} else {
+  const typeArr = [50, 2, 90, 770, 80, 320];
+  obj.data = obj.data.filter(item => !typeArr.includes(item.position_type));
 }
-
-const typeArr = [50, 2, 90, 770, 80, 320];
-obj.data = obj.data.filter(item => !typeArr.includes(item.position_type));
 
 body = JSON.stringify(obj);
 $done({body});
