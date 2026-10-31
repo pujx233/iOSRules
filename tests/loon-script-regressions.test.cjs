@@ -98,3 +98,21 @@ test('贴吧字符串 false 关闭视频过滤，保留直播过滤', () => {
     assert.deepEqual(Array.from(result), expected);
   }
 });
+
+test('全家配置一次过滤八个广告标识，保留结果并减少 JSON 解析', () => {
+  const ids = ['13502ede-f5fd-4d5c-90f5-f2454a30fda0', 'c1caaf62-e91d-4040-b533-dab39c0fec13', 'cc9d17ec-3ac5-494b-b82e-8d3c72c243d4', '7bef8fe9-0daf-46b3-a2b0-dd9fba49423f', 'ff7e1263-d8d2-4f09-9947-d8c43c77bb10', '874197b4-fe93-4a80-a555-8df1bc7e8211', '0ba6a615-b7e9-48aa-afe7-329635385f2c', 'a11b0e7d-a162-4802-ac71-21d98e8adddf'];
+  const keep = [{ id: 'keep-first', value: 1 }, { id: 'keep-last', value: 2 }];
+  const samples = [[keep[0], ...ids.map((id, i) => ({ id: i % 2 ? `prefix-${id}-suffix` : id })), keep[1]], keep, []];
+  for (const items of samples) {
+    const input = { code: 0, data: { config: JSON.stringify(items), other: 'unchanged' } };
+    let parses = 0, serializations = 0, result, calls = 0;
+    vm.runInNewContext(read('Script/Kelee/kff.js'), {
+      $response: { body: JSON.stringify(input) },
+      JSON: { parse: (...args) => { parses++; return JSON.parse(...args); }, stringify: (...args) => { serializations++; return JSON.stringify(...args); } },
+      $done: value => { result = value; calls++; }
+    });
+    const expected = { code: 0, data: { config: JSON.stringify(items.length ? keep : []), other: 'unchanged' } };
+    assert.equal(result.body, JSON.stringify(expected));
+    assert.equal(calls, 1); assert.equal(parses, 2); assert.equal(serializations, 2);
+  }
+});
