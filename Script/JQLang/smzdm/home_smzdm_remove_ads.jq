@@ -8,7 +8,7 @@
       select(
         ( (.ad_campaign_id? | type == "string" and length > 0) // false ) or
         ( (.tag? | type == "string" and length > 0) // false ) or
-        ( (.model_type? == "ads" and (type == "string")) // false )
+        ( (.model_type? == "ads") // false )
         | not
       )
     )

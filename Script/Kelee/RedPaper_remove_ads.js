@@ -239,7 +239,6 @@ if (url.includes("/v1/interaction/comment/video/download")) {
   }
 } else if (url.includes("/v5/note/comment/list")) {
   // 处理评论区实况照片
-  replaceRedIdWithFmz200(obj.data);
   let livePhotos = [];
   let note_id = "";
   if (obj?.data?.comments?.length > 0) {
@@ -268,11 +267,11 @@ if (url.includes("/v1/interaction/comment/video/download")) {
       }
       if (comment?.sub_comments?.length > 0) {
         for (const sub_comment of comment.sub_comments) {
-          if (comment?.comment_type === 3) {
-            comment.comment_type = 2;
+          if (sub_comment?.comment_type === 3) {
+            sub_comment.comment_type = 2;
           }
-          if (comment?.media_source_type === 1) {
-            comment.media_source_type = 0;
+          if (sub_comment?.media_source_type === 1) {
+            sub_comment.media_source_type = 0;
           }
           if (sub_comment?.pictures?.length > 0) {
             for (const picture of sub_comment.pictures) {
@@ -391,18 +390,4 @@ function deduplicateLivePhotos(livePhotos) {
     return true;
   });
   return livePhotos;
-}
-
-function replaceRedIdWithFmz200(obj) {
-  if (Array.isArray(obj)) {
-    obj.forEach((item) => replaceRedIdWithFmz200(item));
-  } else if (typeof obj === "object" && obj !== null) {
-    if ("red_id" in obj) {
-      obj.fmz200 = obj.red_id; // 创建新属性fmz200
-      delete obj.red_id; // 删除旧属性red_id
-    }
-    Object.keys(obj).forEach((key) => {
-      replaceRedIdWithFmz200(obj[key]);
-    });
-  }
 }

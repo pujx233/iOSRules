@@ -34,4 +34,4 @@ response if ${url} ~= /^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)
 response if ${url} ~= /^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/tfe\/api\/request_combine\/v1\/\?need_personal_recommend/i then response.json.replace(["data[\"/service/settings/v3/\"].body.data.settings.homepage_two_session_tab_skin_2025", "data[\"/service/settings/v3/\"].body.data.settings.homepage_tab_skin_enable"], [false, false])
 
 [MitM]
-hostname=aweme.snssdk.com, api5-normal-m.amemv.com
+hostname=aweme.snssdk.com, api5-normal-m.amemv.com, api5-normal-lq.amemv.com, zlink.ugsdk.cn

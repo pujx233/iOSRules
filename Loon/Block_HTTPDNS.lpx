@@ -231,4 +231,4 @@ request if ${url} ~= /^https:\/\/ucdc\d?-upaas\.uc\.cn\/api\/v\d\/dns_query\?/i 
 request if ${url} ~= /^https:\/\/gw-cn\.jiaoliuqu\.com\/taqu-im-broadcast-srv\/v\d\/Comet\/get\?/i then reject_dict(200)
 
 [MitM]
-hostname=appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com
+hostname=appconf.mail.163.com, msglb.91160.com, ucdc2-upaas.uc.cn, gw-cn.jiaoliuqu.com, cdn.wup.huya.com, gslbali.ximalaya.com, ucdc-upaas.uc.cn, ucdc0-upaas.uc.cn, ucdc1-upaas.uc.cn, ucdc3-upaas.uc.cn, ucdc4-upaas.uc.cn, ucdc5-upaas.uc.cn, ucdc6-upaas.uc.cn, ucdc7-upaas.uc.cn, ucdc8-upaas.uc.cn, ucdc9-upaas.uc.cn

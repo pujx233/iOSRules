@@ -4,7 +4,9 @@
 // 2024-11-24 18:15
 
 const url = $request.url;
-const header = $request.headers;
+const header = Object.fromEntries(
+  Object.entries($request.headers || {}).map(([name, value]) => [name.toLowerCase(), value])
+);
 const contype = header["content-type"];
 const headopt = header["operation-type"];
 
