@@ -1,13 +1,13 @@
 #!name=得物去广告
 #!desc=移除开屏广告、弹窗、搜索词填充、热搜榜、猜你想搜、推荐关注、推荐信息流，精简消息中心和我的页面。
 #!openUrl=https://apps.apple.com/app/id1012871328
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/Dewu_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Dewu.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Dewu.png
 #!date=2026-10-02 13:57:49
 
 [Rewrite]

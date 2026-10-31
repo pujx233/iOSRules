@@ -1,13 +1,13 @@
 #!name=Soul去广告
 #!desc=移除开屏广告、移除话题页面热Soul话题、移除评论区礼物榜、移除更新提示、移除青少年弹窗、移除我的页面推广、移除悬浮部件。
 #!openUrl=https://apps.apple.com/app/id1032287195
-#!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi], RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi], RuCu6[https://github.com/RuCu6], 可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/Soul_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Soul.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Soul.png
 #!date=2026-10-02 13:57:49
 
 [Rule]

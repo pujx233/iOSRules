@@ -1,13 +1,13 @@
 #!name=Follow每日签到
 #!desc=Follow每日签到，需要进入此插件的主页链接，阅读使用说明操作。
 #!openUrl=https://follow.is
-#!author=gideonsenku[https://github.com/gideonsenku], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=gideonsenku[https://github.com/gideonsenku], 可莉🅥
 #!tag=签到
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/FollowRSS_checkin.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FollowRSS.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FollowRSS.png
 #!date=2026-10-02 13:57:49
 
 [Argument]

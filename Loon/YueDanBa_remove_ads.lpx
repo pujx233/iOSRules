@@ -1,13 +1,13 @@
 #!name=省钱快报去广告
 #!desc=移除开屏广告、横幅广告、商品推荐，精简我的页面。
 #!openUrl=https://apps.apple.com/app/id1116025300
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/YueDanBa_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YueDanBa.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YueDanBa.png
 #!date=2026-10-02 13:57:49
 
 [Rewrite]

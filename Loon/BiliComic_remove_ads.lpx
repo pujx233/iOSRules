@@ -1,13 +1,13 @@
 #!name=哔哩哔哩漫画去广告
 #!desc=移除开屏广告、应用内悬浮窗、各类横幅广告、你可能喜欢、小说推荐、首页弹窗，精简首页标签、底栏活动按钮和我的页面。
 #!openUrl=https://apps.apple.com/app/id1426252715
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/BiliComic_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BiliComic.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BiliComic.png
 #!date=2026-10-02 13:57:49
 
 [Rewrite]

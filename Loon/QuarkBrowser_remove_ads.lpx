@@ -1,13 +1,13 @@
 #!name=夸克去广告
 #!desc=移除阅读广告、各页面弹窗及横幅，精简我的页面。
 #!openUrl=https://apps.apple.com/app/id1160172628
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/QuarkBrowser_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QuarkBrowser.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QuarkBrowser.png
 #!date=2026-10-02 13:57:49
 
 [Rewrite]

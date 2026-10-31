@@ -7,7 +7,7 @@
 #!system_version=15
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/Bilibili_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Bilibili.png
 #!date=2026-10-30
 
 [Argument]

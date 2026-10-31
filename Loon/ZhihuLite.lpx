@@ -1,12 +1,12 @@
 #!name=知乎去广告
 #!desc=移除HTTPDNS和QUIC传输配置，清理开屏、信息流、回答正文及底部广告，移除已知推广卡片、评论氛围调查和会员推广入口；过滤“你可能感兴趣”等推荐卡片，保留原生首页标签和排序。
 #!openUrl=https://apps.apple.com/app/id432274380
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.4.0(962)
-#!homepage=https://hub.kelee.one
+#!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/ZhihuLite.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Zhihu.png
 #!date=2026-06-01 17:11:35
 

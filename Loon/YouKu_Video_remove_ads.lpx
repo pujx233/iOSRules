@@ -1,13 +1,13 @@
 #!name=优酷视频去广告
 #!desc=移除开屏广告、视频广告、信息流广告。其余广告由于请求已加密，故无法移除。
 #!openUrl=https://apps.apple.com/app/id336141475
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], RuCu6[https://github.com/RuCu6]
+#!author=可莉🅥, RuCu6[https://github.com/RuCu6]
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/YouKu_Video_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouKu_Video.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YouKu_Video.png
 #!date=2026-10-02 13:57:49
 
 [Rule]

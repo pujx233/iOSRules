@@ -1,13 +1,13 @@
 #!name=KOOK去广告
 #!desc=移除开屏广告、房间横幅推广、促销活动、精简发现页面频道及我的页面，移除底栏商城入口。
 #!openUrl=https://apps.apple.com/app/id1501289327
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/KOOK_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KOOK.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KOOK.png
 #!date=2026-10-02 13:57:49
 
 [Rewrite]

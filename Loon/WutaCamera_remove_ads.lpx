@@ -1,13 +1,13 @@
 #!name=无他相机去广告
 #!desc=移除开屏广告、拍摄页面广告、右小角广告，精简底栏。
 #!openUrl=https://apps.apple.com/app/id1061534032
-#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author=可莉🅥
 #!tag=去广告
 #!system=
 #!system_version=
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/WutaCamera_remove_ads.lpx
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WutaCamera.png
+#!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WutaCamera.png
 #!date=2026-10-02 13:57:49
 
 [Rewrite]

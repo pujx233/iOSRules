@@ -1,11 +1,11 @@
 # iOSRules
 
-[Loon](Loon/) · [Stash](Stash/) · [Quantumult X](QuantumultX/) · [Script](Script/) · [Icon](Icon/)
+[Loon](Loon/) · [Stash](Stash/) · [Quantumult X](QuantumultX/) · [Script](Script/) · [Icon](Icon/) · [Pic](Pic/)
 
 Loon 知乎使用 [ZhihuLite.js](Script/ZhihuLite.js) 自用版本；FotMob 为纯原生规则。
-哔哩哔哩只保留[可莉版入口](Loon/Bilibili_remove_ads.lpx)，使用[本地兼容脚本](Script/Bilibili/)，空降默认关闭，9.17.0 及以上自动跳过空降处理。
+哔哩哔哩使用[本仓库入口](Loon/Bilibili_remove_ads.lpx)，使用[本地兼容脚本](Script/Bilibili/)，空降默认关闭，9.17.0 及以上自动跳过空降处理。
 保留原作者署名；署名与来源注释不代表仍从原站下载脚本。
-`Script/Kelee/` 保留可莉备份，`Script/Upstream/` 按原作者、仓库和路径存放其他来源，分别供对应配置引用。
+`Script/Kelee/` 保存脚本来源备份，`Script/Upstream/` 按原作者、仓库和路径存放其他来源，分别供对应配置引用。
 
 ## Loon
 
@@ -133,7 +133,7 @@ Loon 知乎使用 [ZhihuLite.js](Script/ZhihuLite.js) 自用版本；FotMob 为�
 | 快捷搜索 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FQuickSearch.lpx) | [LPX](Loon/QuickSearch.lpx) | — |
 | Reddit去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FReddit_remove_ads.lpx) | [LPX](Loon/Reddit_remove_ads.lpx) | [Reddit_remove_ads.jq](Script/JQLang/Reddit/Reddit_remove_ads.jq) |
 | 小红书去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FRedPaper_remove_ads.lpx) | [LPX](Loon/RedPaper_remove_ads.lpx) | [RedPaper_remove_ads.js](Script/Kelee/RedPaper_remove_ads.js) |
-| 可莉广告过滤器 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FRemove_ads_by_keli.lpx) | [LPX](Loon/Remove_ads_by_keli.lpx) | — |
+| 通用广告过滤器 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FRemove_ads_by_keli.lpx) | [LPX](Loon/Remove_ads_by_keli.lpx) | — |
 | 风鸟去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FRiskBird_remove_ads.lpx) | [LPX](Loon/RiskBird_remove_ads.lpx) | [RiskBird_remove_ads.js](Script/Kelee/RiskBird_remove_ads.js) |
 | 360智慧生活去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FSafetyHome_remove_ads.lpx) | [LPX](Loon/SafetyHome_remove_ads.lpx) | — |
 | Script-Hub | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FScript-Hub.lpx) | [LPX](Loon/Script-Hub.lpx) | [Rewrite-Parser.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js) · [rule-parser.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js) · [script-converter.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js) · [script-hub.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js) |
@@ -173,7 +173,7 @@ Loon 知乎使用 [ZhihuLite.js](Script/ZhihuLite.js) 自用版本；FotMob 为�
 | 微博去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWeibo_remove_ads.lpx) | [LPX](Loon/Weibo_remove_ads.lpx) | [Weibo_remove_ads.js](Script/Kelee/Weibo_remove_ads.js) |
 | 微信外部链接解锁 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWeixin_external_links_unlock.lpx) | [LPX](Loon/Weixin_external_links_unlock.lpx) | [Weixin_external_links_unlock.js](Script/Kelee/Weixin_external_links_unlock.js) |
 | 微信公众号去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWeixin_Official_Accounts_remove_ads.lpx) | [LPX](Loon/Weixin_Official_Accounts_remove_ads.lpx) | — |
-| 微信小程序去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWexinMiniPrograms_Remove_ads.lpx) | [LPX](Loon/WexinMiniPrograms_Remove_ads.lpx) | [FamilyMart.js](Script/Kelee/FamilyMart.js) · [M_Stand.js](Script/Kelee/M_Stand.js) · [T3.js](Script/Kelee/T3.js) · [alittle-tea.js](Script/Kelee/alittle-tea.js) · [chayanyuese_remove_ads.js](Script/Kelee/chayanyuese_remove_ads.js) · [coco.js](Script/Kelee/coco.js) · [ems.js](Script/Kelee/ems.js) · [kff.js](Script/Kelee/kff.js) · [lawson.js](Script/Kelee/lawson.js) · [ming.js](Script/Kelee/ming.js) · [qingju.js](Script/Kelee/qingju.js) · [xiaotucc.js](Script/Kelee/xiaotucc.js) |
+| 微信小程序去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWexinMiniPrograms_Remove_ads.lpx) | [LPX](Loon/WexinMiniPrograms_Remove_ads.lpx) | [FamilyMart.js](Script/Kelee/FamilyMart.js) · [M_Stand.js](Script/Kelee/M_Stand.js) · [T3.js](Script/Kelee/T3.js) · [alittle-tea.js](Script/Kelee/alittle-tea.js) · [coco.js](Script/Kelee/coco.js) · [ems.js](Script/Kelee/ems.js) · [kff.js](Script/Kelee/kff.js) · [lawson.js](Script/Kelee/lawson.js) · [ming.js](Script/Kelee/ming.js) · [qingju.js](Script/Kelee/qingju.js) · [xiaotucc.js](Script/Kelee/xiaotucc.js) |
 | 威锋去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWPForum_remove_ads.lpx) | [LPX](Loon/WPForum_remove_ads.lpx) | — |
 | WPS每日签到 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWPS_checkin.lpx) | [LPX](Loon/WPS_checkin.lpx) | [WPS_checkin.js](Script/Kelee/WPS_checkin.js) |
 | 金山文档去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FWPS_Documents_remove_ads.lpx) | [LPX](Loon/WPS_Documents_remove_ads.lpx) | — |
