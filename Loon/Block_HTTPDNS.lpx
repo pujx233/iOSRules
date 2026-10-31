@@ -176,7 +176,6 @@ DOMAIN, httpdns-sdk.n.netease.com, REJECT
 DOMAIN, httpdns.yunxindns.com, REJECT
 DOMAIN, lofter.httpdns.c.163.com, REJECT
 DOMAIN, music.httpdns.c.163.com, REJECT
-DOMAIN, httpdns.yunxindns.com, REJECT
 IP-CIDR, 59.111.239.61/32, REJECT, no-resolve
 IP-CIDR, 59.111.239.62/32, REJECT, no-resolve
 IP-CIDR, 115.236.121.51/32, REJECT, no-resolve
@@ -205,7 +204,6 @@ IP-CIDR, 116.85.3.39/32, REJECT, no-resolve
 IP-CIDR, 123.207.209.142/32, REJECT, no-resolve 
 IP-CIDR, 139.199.240.84/32, REJECT, no-resolve
 
-DOMAIN, httpdns.zybang.com, REJECT
 
 DOMAIN, serveraddr.service.kugou.com, REJECT
 DOMAIN, twns.p2ptun.qq.com, REJECT
@@ -218,7 +216,6 @@ URL-REGEX, "^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-
 
 URL-REGEX, "^http:\/\/\[[0-9a-fA-F:]+\]:\d+\/httpdns\/", REJECT
 
-DOMAIN, httpdns.zybang.com, REJECT
 
 [Rewrite]
 request if ${url} ~= /^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$/i then reject_dict(200)

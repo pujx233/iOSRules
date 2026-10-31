@@ -64,7 +64,6 @@ DOMAIN-SUFFIX, appsad.cn, REJECT
 DOMAIN-SUFFIX, beizi.biz, REJECT
 DOMAIN-SUFFIX, ad-scope.com.cn, REJECT
 DOMAIN-SUFFIX, adn-plus.com.cn, REJECT
-DOMAIN-SUFFIX, beizi.biz, REJECT
 DOMAIN-SUFFIX, adhub.com.cn, REJECT
 DOMAIN-SUFFIX, adnplus.com.cn, REJECT
 DOMAIN-SUFFIX, adscope.com.cn, REJECT
@@ -109,7 +108,6 @@ DOMAIN, mobads.baidu.com, REJECT
 DOMAIN, nadvideo2.baidu.com, REJECT
 DOMAIN, wn.pos.baidu.com, REJECT
 DOMAIN, miniapp-ad.cdn.bcebos.com, REJECT
-DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
 DOMAIN, hm.baidu.com, REJECT
 DOMAIN, dlswbr.baidu.com, REJECT
 DOMAIN, miao.baidu.com, REJECT
@@ -139,7 +137,6 @@ DOMAIN, tmeadcomm.y.qq.com, REJECT
 DOMAIN, tpns.qq.com, REJECT
 DOMAIN, wup.imtt.qq.com, REJECT
 DOMAIN, tpstelemetry.tencent.com, REJECT
-DOMAIN, otheve.beacon.qq.com, REJECT
 DOMAIN, stat.y.qq.com, REJECT
 DOMAIN, stat6.y.qq.com, REJECT
 DOMAIN, oth.str.mdt.qq.com, REJECT
@@ -193,7 +190,6 @@ DOMAIN-SUFFIX, rhinokeen.com, REJECT
 DOMAIN-SUFFIX, lydaas.com, REJECT
 DOMAIN-SUFFIX, xixikf.com, REJECT
 DOMAIN-SUFFIX, wrating.com, REJECT
-DOMAIN-SUFFIX, puata.info, REJECT
 DOMAIN-SUFFIX, mobmore.com, REJECT
 DOMAIN-SUFFIX, um0.cn, REJECT
 DOMAIN-SUFFIX, umv0.com, REJECT
@@ -202,18 +198,13 @@ DOMAIN-SUFFIX, eshiqi.com, REJECT
 DOMAIN-SUFFIX, umv5.com, REJECT
 DOMAIN-SUFFIX, dratio.com, REJECT
 DOMAIN-SUFFIX, umtrack0.com, REJECT
-DOMAIN-SUFFIX, uyunad.com, REJECT
 DOMAIN-SUFFIX, whalecloud.com, REJECT
 DOMAIN-SUFFIX, umtrack2.com, REJECT
 DOMAIN-SUFFIX, umengcloud.com, REJECT
-DOMAIN-SUFFIX, umeng.com, REJECT
-DOMAIN-SUFFIX, umtrack.com, REJECT
 DOMAIN-SUFFIX, um1.cn, REJECT
-DOMAIN-SUFFIX, umsns.com, REJECT
 
 DOMAIN-SUFFIX, adfunlink.com, REJECT
 
-DOMAIN-SUFFIX, tianmu.mobi, REJECT
 
 DOMAIN-SUFFIX, ubixioe.com, REJECT
 
@@ -250,7 +241,6 @@ DOMAIN-SUFFIX, iytcdn.com, REJECT
 
 DOMAIN, huichuan.sm.cn, REJECT
 DOMAIN, huichuan-mc.sm.cn, REJECT
-DOMAIN, api.sm.cn, REJECT
 
 DOMAIN, nex.163.com, REJECT
 DOMAIN, iad.g.163.com, REJECT
@@ -305,10 +295,7 @@ DOMAIN-SUFFIX, lnk0.com, REJECT
 DOMAIN-SUFFIX, bridgeoos.com, REJECT
 DOMAIN-SUFFIX, anythinktech.com, REJECT
 DOMAIN-SUFFIX, birdgesdk.com, REJECT
-DOMAIN-SUFFIX, toponadss.com, REJECT
-DOMAIN-SUFFIX, bridgeoos.com, REJECT
 DOMAIN-SUFFIX, anyrtb.com, REJECT
-DOMAIN-SUFFIX, anythinktech.com, REJECT
 DOMAIN-SUFFIX, combocn.com, REJECT
 
 DOMAIN-SUFFIX, beanxin.com, REJECT
@@ -346,7 +333,6 @@ DOMAIN-SUFFIX, googlesyndication-cn.com, REJECT
 
 DOMAIN-SUFFIX, xinduoad.com, REJECT
 
-DOMAIN-SUFFIX, kuaiyiad.com, REJECT
 
 DOMAIN, statis.miwuad.com, REJECT
 
@@ -354,7 +340,6 @@ DOMAIN-SUFFIX, sigmob.cn, REJECT
 
 DOMAIN-SUFFIX, richmob.cn, REJECT
 
-DOMAIN-SUFFIX, 66mobi.com, REJECT
 
 DOMAIN, ad.shunchangzhixing.com, REJECT
 DOMAIN, redirect.shunchangzhixing.com, REJECT
@@ -373,7 +358,6 @@ DOMAIN-SUFFIX, bxsnews.com, REJECT
 
 DOMAIN-SUFFIX, ranfenghd.com, REJECT
 
-DOMAIN-SUFFIX, miaozhen.com, REJECT
 
 DOMAIN-SUFFIX, qchannel01.cn, REJECT
 

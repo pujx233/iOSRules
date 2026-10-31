@@ -17,7 +17,6 @@ AND, ((DOMAIN, api.pinduoduo.com), (PROTOCOL, QUIC)), REJECT
 DOMAIN, titan.pinduoduo.com, REJECT
 DOMAIN, xg.pinduoduo.com, REJECT
 DOMAIN, cdl-1.pddpic.com, REJECT
-DOMAIN, titan.pinduoduo.com, REJECT
 DOMAIN, cdl-p2.pddpic.com, REJECT
 DOMAIN, cd-1.pddpic.com, REJECT
 DOMAIN, apm.pinduoduo.com, REJECT

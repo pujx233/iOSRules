@@ -142,3 +142,39 @@ test('Script-Hub 图标查询使用本仓库清单及新缓存', async () => {
   assert.equal(await getIcon('哔哩哔哩'), own + 'Icon/Bilibili.png');
   assert.deepEqual(requests, [own + 'Icon/iOSRules.json']);
 });
+
+for (const [name, file, urls, unrelated] of [
+  ['一点点', 'alittle-tea.js', [
+    'https://cappapi.alittle-tea.com/open?method=catering.set.ad',
+    'https://cappapi.alittle-tea.com/open?method=catering.set.ad&store=1'
+  ], 'https://cappapi.alittle-tea.com/open?method=catering.order.list'],
+  ['T3', 'T3.js', [
+    'https://passenger.t3go.cn/passenger-api/notoken/api/v1/ad/getNegativescreen',
+    'https://passenger.t3go.cn/common-passenger-activity-api/notoken/trip/api/common/v2/leftmenu'
+  ], 'https://passenger.t3go.cn/passenger-api/notoken/api/v1/trip/getOrder'],
+  ['古茗', 'ming.js', [
+    'https://newton.gumingnc.com/newton-buyer/newton/buyer/ump',
+    'https://newton.gumingnc.com/newton-buyer/newton/buyer/external/front'
+  ], 'https://newton.gumingnc.com/newton-buyer/newton/buyer/order']
+]) test(`${name}原生 JSON 处理与原脚本一致，保留其他字段和 URL 范围`, () => {
+  const source = read('Loon/WexinMiniPrograms_Remove_ads.lpx');
+  const rewrite = source.split('[Rewrite]')[1].split('[Script]')[0];
+  const lines = rewrite.split('\n').filter(line => line.includes('response.json.jq'));
+  const regex = line => new RegExp(line.match(/~= \/(.*)\/i then/)[1], 'i');
+  const matched = lines.filter(line => regex(line).test(urls[0]));
+  assert.equal(matched.length, 1);
+  const line = matched[0];
+  for (const url of urls) assert.ok(regex(line).test(url));
+  assert.ok(!regex(line).test(unrelated));
+  assert.ok(!regex(line).test(urls[0].replace('https://', 'http://')));
+  assert.ok(!source.includes('/Script/Kelee/' + file));
+  for (const input of [
+    { code: 0, data: { ad: [1] }, keep: { enabled: true } },
+    { data: [1, 2], id: '900719925474099312345', text: '保留文字' },
+    { data: null, keep: false },
+    { keep: ['unchanged'] }
+  ]) {
+    const original = run('Script/Kelee/' + file, { $response: { body: JSON.stringify(input) } });
+    assert.deepEqual(jq(jqFilter(line), input), JSON.parse(original.body));
+  }
+});
