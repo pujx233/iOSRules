@@ -15,6 +15,7 @@ if (url.includes(path2)) {
     const reqbody = $request.body
     $.setdata(reqbody, manmanbuy_key);
     $.msg($.name, '获取ck成功🎉', reqbody);
+    $done({});
 }
 
 if (url.includes(path1)) {

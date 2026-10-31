@@ -161,6 +161,7 @@ if(resStatus !== 200) {
                 break;
         }
 
+        argOptions.per_filter_video_thread = argOptions.per_filter_video_thread === true || argOptions.per_filter_video_thread === 1 || argOptions.per_filter_video_thread === "true" || argOptions.per_filter_video_thread === "1";
         const personalizedResIdlObj = PersonalizedResIdl.fromBinary(binaryBody,{readUnknownField: true});
         removeGoodsInfo(personalizedResIdlObj.data.bannerList?.app);
         personalizedResIdlObj.data.threadList = removeThread(personalizedResIdlObj.data.threadList,

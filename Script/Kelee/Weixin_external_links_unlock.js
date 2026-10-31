@@ -8,7 +8,7 @@ let wechatExportKey = persisVal.wechatExportKey || ""; //微信的一个 key，�
 if (typeof $argument != "undefined") {
     let arg = Object.fromEntries($argument.split("&").map((item) => item.split("=")));
     useCache = arg.useCache === "true";
-    forceRedirect = arg.forceRedirect === "ture";
+    forceRedirect = arg.forceRedirect === "true";
 }
 const respBody = $response.body;
 //const cacheURL = "https://webcache.googleusercontent.com/search?q=cache:";
