@@ -4,8 +4,8 @@ https://t.me/ibilibili
 */
 let body = $response.body || "";
 
-const oldChunk = "https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/Kelee/PinDuoDuo_remove_ads.js";
-const newChunk = "https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/Kelee/PinDuoDuo_remove_ads.js";
+const oldChunk = "https://pfile.pddpic.com/mdkd/mdkd/_next/static/chunks/9410-b8806e870a26db7d.js";
+const newChunk = "https://cdn.jsdelivr.net/gh/pujx233/iOSRules@main/Script/PinDuoDuo/9410-b8806e870a26db7d.js";
 
 function replaceAllText(text, from, to) {
   let pos = text.indexOf(from);

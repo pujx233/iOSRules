@@ -49,7 +49,7 @@ request if ${url} ~= /^https:\/\/m1fxgroup\.kugou\.com\/fxsing\/yqc\/alongInfo\/
 request if ${url} ~= /^https:\/\/hwstore\.kugou\.com\/v\d\/get_store_data/i then reject_dict(200)
 request if ${url} ~= /^https:\/\/ep\.kugou\.com\/v\d\/album_shop\/get_entrance_info/i then reject_dict(200)
 
-response if ${url} ~= /^https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/tab\/list_v\d/i then response.json.jq("def namesToRemove:[\"AI帮唱\",\"长相思2\",\"K歌\",\"小说\",\"游戏\"];def removeParentIfNameMatches:if type==\"object\"then with_entries(select(.value|(type==\"object\"and .name as $name|$name|IN(namesToRemove[])|not)))|map_values(removeParentIfNameMatches)else .end;removeParentIfNameMatches")
+response if ${url} ~= /^https:\/\/gateway(retry)?\.kugou\.com\/ocean\/v\d\/tab\/list_v\d/i then response.json.jq("def blocked: if type == \"object\" then .name? | IN(\"AI帮唱\", \"长相思2\", \"K歌\", \"小说\", \"游戏\") else false end; def clean: if type == \"object\" then with_entries(select(.value | blocked | not)) | map_values(clean) elif type == \"array\" then map(select(blocked | not) | clean) else . end; clean")
 
 [MitM]
 hostname=gateway.kugou.com, fx.service.kugou.com, hwstore.kugou.com, ep.kugou.com, gatewayretry.kugou.com, gzacshow.kugou.com, m1fxgroup.kugou.com

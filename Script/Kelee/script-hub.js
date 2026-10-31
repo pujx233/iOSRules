@@ -923,7 +923,7 @@ const htmls = `
           <input type="checkbox" id="frontendConvert" v-model.lazy="frontendConvert" :disabled="frontendConvertDisabled"/>
           <label class="button-over" for="frontendConvert">开启纯前端转换</label>
           <br/>
-          <small>使用限制: 1. 使用网页部署前端 2. 使用 <code>本地文本内容</code> 3. 转换类型为 <code>重写/模块/覆写/插件 </code> 4. 不会进行内部的 <code>脚本转换</code> 5. 不会进行网络请求 例: 无法使用 <code>可莉图标订阅</code> 但是可以使用完整图标文件链接</small>
+          <small>使用限制: 1. 使用网页部署前端 2. 使用 <code>本地文本内容</code> 3. 转换类型为 <code>重写/模块/覆写/插件 </code> 4. 不会进行内部的 <code>脚本转换</code> 5. 不会进行网络请求 例: 无法使用 <code>图标订阅</code> 但是可以使用完整图标文件链接</small>
         </div>
         <button v-if="copyInfo">{{copyInfo}}</button>
         <button v-else @click="copy" :disabled="!result">复制</button>
@@ -1050,7 +1050,7 @@ const htmls = `
 
       <details v-if="!target || (!target.endsWith('rule-set') && !target.includes('domain-set') && !target.endsWith('-script') && target !== 'plain-text' )">
         <summary>图标</summary>
-        <p>可指定 <a href="https://raw.githubusercontent.com/luestr/IconResource/main/KeLee_icon.json" target="_blank">可莉图标订阅</a> 里的图标名或图标链接</p>
+        <p>可指定 <a href="https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iOSRules.json" target="_blank">图标订阅</a> 里的图标名或图标链接</p>
         <textarea id="icon" v-model.lazy="icon" placeholder="指定 icon"></textarea>
       </details>
 

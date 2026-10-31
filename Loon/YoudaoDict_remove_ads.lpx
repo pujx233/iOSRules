@@ -11,7 +11,7 @@
 #!date=2026-10-02 13:57:49
 
 [Rule]
-ad-sdk-config.youdao.com
+DOMAIN, ad-sdk-config.youdao.com, REJECT
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/dict\.youdao\.com\/homepage\/toolbar\/get\//i then response.json.delete("data.vipTag")

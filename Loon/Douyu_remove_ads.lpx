@@ -17,9 +17,9 @@ AND, ((DEST-PORT, 18000), (PROTOCOL, STUN)), REJECT
 DOMAIN, stun1.douyucdn.cn, REJECT
 DOMAIN, stun1.qvb.qcloud.com, REJECT
 
+[Rewrite]
 ^(http:\/\/)((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/(hlsh5p1\.douyucdn2\.cn)(.*) 307 $1$5$6
 
-[Rewrite]
 request if ${url} ~= /^https:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo/i then reject_dict(200)
 
 response if ${url} ~= /^https:\/\/apiv2\.douyucdn\.cn\/japi\/entrance\/roomRes\/nc\/m\/list/i then response.json.delete(["data.pendant_a", "data.entrance_d"])

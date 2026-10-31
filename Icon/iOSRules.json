@@ -1,0 +1,1578 @@
+{
+  "name": "iOSRules",
+  "description": "iOSRules 图标",
+  "icons": [
+    {
+      "name": "Loon",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Loon.png"
+    },
+    {
+      "name": "1.1.1.1",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/1.1.1.1.png"
+    },
+    {
+      "name": "12306",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/12306.png"
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Adobe_Creative_Cloud.png"
+    },
+    {
+      "name": "Agenda",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Agenda.png"
+    },
+    {
+      "name": "AppRaven",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AppRaven.png"
+    },
+    {
+      "name": "Audiomack",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Audiomack.png"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Bluesky.png"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ChatGPT.png"
+    },
+    {
+      "name": "Claude",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Claude.png"
+    },
+    {
+      "name": "Cubox",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Cubox.png"
+    },
+    {
+      "name": "Darkroom",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Darkroom.png"
+    },
+    {
+      "name": "Dazn",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Dazn.png"
+    },
+    {
+      "name": "Discovery+",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Discovery%2B.png"
+    },
+    {
+      "name": "Disney+",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Disney%2B.png"
+    },
+    {
+      "name": "Documents",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Documents.png"
+    },
+    {
+      "name": "Drafts",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Drafts.png"
+    },
+    {
+      "name": "Emby",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Emby.png"
+    },
+    {
+      "name": "Enpass Password Manager",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Enpass_Password_Manager.png"
+    },
+    {
+      "name": "Fileball",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Fileball.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/GitHub.png"
+    },
+    {
+      "name": "Google",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Google.png"
+    },
+    {
+      "name": "Grow",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Grow.png"
+    },
+    {
+      "name": "Happy:Days",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HappyDays.png"
+    },
+    {
+      "name": "IT之家",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/IThome.png"
+    },
+    {
+      "name": "Instapaper",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Instapaper.png"
+    },
+    {
+      "name": "JavaScript转换器",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/JavaScriptConverter.png"
+    },
+    {
+      "name": "Line",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Line.png"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Netflix.png"
+    },
+    {
+      "name": "Nicegram",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Nicegram.png"
+    },
+    {
+      "name": "Nike",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Nike.png"
+    },
+    {
+      "name": "Notability",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Notability.png"
+    },
+    {
+      "name": "PDF点睛",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PDF_Expert.png"
+    },
+    {
+      "name": "Paramount+",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Paramount%2B.png"
+    },
+    {
+      "name": "Picsart",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Picsart.png"
+    },
+    {
+      "name": "PikPak",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PikPak.png"
+    },
+    {
+      "name": "Prime Video",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PrimeVideo.png"
+    },
+    {
+      "name": "ProCamera",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ProCamera.png"
+    },
+    {
+      "name": "QQ",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QQ.png"
+    },
+    {
+      "name": "QQ音乐",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QQMusic.png"
+    },
+    {
+      "name": "Reddit",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Reddit.png"
+    },
+    {
+      "name": "Safari",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Safari.png"
+    },
+    {
+      "name": "Scanner Pro",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Scanner_Pro.png"
+    },
+    {
+      "name": "Soul",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Soul.png"
+    },
+    {
+      "name": "Spark",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Spark.png"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Spotify.png"
+    },
+    {
+      "name": "Stay",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Stay.png"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Telegram.png"
+    },
+    {
+      "name": "TestFlight",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TestFlight.png"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TikTok.png"
+    },
+    {
+      "name": "TubeMax",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TubeMax.png"
+    },
+    {
+      "name": "VVebo",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/VVebo.png"
+    },
+    {
+      "name": "Xmind",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Xmind.png"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YouTube.png"
+    },
+    {
+      "name": "YouTube Music",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YouTubeMusic.png"
+    },
+    {
+      "name": "一键抠图",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/OneClickCutout.png"
+    },
+    {
+      "name": "七猫小说",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SevenCat.png"
+    },
+    {
+      "name": "中国人保",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PICC_Insurance.png"
+    },
+    {
+      "name": "中国移动云盘",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/mobileClouds.png"
+    },
+    {
+      "name": "云闪付",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/UnionPay.png"
+    },
+    {
+      "name": "京东",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/JD.png"
+    },
+    {
+      "name": "什么值得买",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/smzdm.png"
+    },
+    {
+      "name": "优酷视频",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YouKu_Video.png"
+    },
+    {
+      "name": "全民K歌",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QQKSong.png"
+    },
+    {
+      "name": "半次元",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Bcy.png"
+    },
+    {
+      "name": "哔哩哔哩",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Bilibili.png"
+    },
+    {
+      "name": "唱吧",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Changba.png"
+    },
+    {
+      "name": "喜马拉雅",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Himalaya.png"
+    },
+    {
+      "name": "宝宝树孕育",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BabyTree.png"
+    },
+    {
+      "name": "小红书",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/RedPaper.png"
+    },
+    {
+      "name": "微信",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Weixin.png"
+    },
+    {
+      "name": "微信小程序",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WeixinMiniPrograms.png"
+    },
+    {
+      "name": "微博",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Weibo.png"
+    },
+    {
+      "name": "微博轻享版",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Weibo_intl.png"
+    },
+    {
+      "name": "必应",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Bing.png"
+    },
+    {
+      "name": "推栏",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Daily.png"
+    },
+    {
+      "name": "搜图神器",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SearchPicture.png"
+    },
+    {
+      "name": "淘宝",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Taobao.png"
+    },
+    {
+      "name": "爱企查",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Aiinquiry.png"
+    },
+    {
+      "name": "爱奇艺",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iQiYi_Video.png"
+    },
+    {
+      "name": "番茄小说",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DragonRead.png"
+    },
+    {
+      "name": "百度",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Baidu.png"
+    },
+    {
+      "name": "百度网盘",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BaiduNetDisk.png"
+    },
+    {
+      "name": "百度输入法",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Baidu_input_method.png"
+    },
+    {
+      "name": "皮皮虾",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PiPiXia.png"
+    },
+    {
+      "name": "知乎",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Zhihu.png"
+    },
+    {
+      "name": "稿定设计",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/GaoDing.png"
+    },
+    {
+      "name": "网易云音乐",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/NeteaseCloudMusic.png"
+    },
+    {
+      "name": "网易新闻",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/NeteaseNews.png"
+    },
+    {
+      "name": "腾讯视频",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Tencent_Video.png"
+    },
+    {
+      "name": "航旅纵横",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Umetrip.png"
+    },
+    {
+      "name": "芒果TV",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Mango_TV.png"
+    },
+    {
+      "name": "菜鸟",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Cainiao.png"
+    },
+    {
+      "name": "虎扑",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HUPU.png"
+    },
+    {
+      "name": "财新",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CaixinMedia.png"
+    },
+    {
+      "name": "贴吧",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Tieba.png"
+    },
+    {
+      "name": "起点读书",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QiDian.png"
+    },
+    {
+      "name": "酷安",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CoolApk.png"
+    },
+    {
+      "name": "阿里云盘",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AliYunDrive.png"
+    },
+    {
+      "name": "高德地图",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Amap.png"
+    },
+    {
+      "name": "纵横小说",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ZongHeng.png"
+    },
+    {
+      "name": "朴朴超市",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PuPuMall.png"
+    },
+    {
+      "name": "滴滴出行",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DiDi.png"
+    },
+    {
+      "name": "启信宝",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QiXinBao.png"
+    },
+    {
+      "name": "转转",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ZhuanZhuan.png"
+    },
+    {
+      "name": "风鸟",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/RiskBird.png"
+    },
+    {
+      "name": "小象买菜",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iMaiCai.png"
+    },
+    {
+      "name": "最右",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ZuiYou.png"
+    },
+    {
+      "name": "网易邮箱大师",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MailMaster.png"
+    },
+    {
+      "name": "小喵看书",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MiaoRead.png"
+    },
+    {
+      "name": "360智慧生活",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SafetyHome.png"
+    },
+    {
+      "name": "360摄像机",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/360SmartCamera.png"
+    },
+    {
+      "name": "萤石云视频",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/VideoGo.png"
+    },
+    {
+      "name": "飞客",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FlyerTea.png"
+    },
+    {
+      "name": "收银通商户端",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ShouYinTongMerchant.png"
+    },
+    {
+      "name": "粉笔",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FenBi.png"
+    },
+    {
+      "name": "乐播投屏",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TV_Assistant.png"
+    },
+    {
+      "name": "小黑盒",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XiaoHeiHe.png"
+    },
+    {
+      "name": "雪球",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Snowball.png"
+    },
+    {
+      "name": "知识星球",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/UnnooQuan.png"
+    },
+    {
+      "name": "随手记",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KingdeeMyMoney.png"
+    },
+    {
+      "name": "迅雷",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XunLei.png"
+    },
+    {
+      "name": "夸克",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QuarkBrowser.png"
+    },
+    {
+      "name": "书旗小说",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ShuQiCenterReader.png"
+    },
+    {
+      "name": "驾考宝典",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/JiaKaoBaoDian.png"
+    },
+    {
+      "name": "驾校一点通",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/JiaXiaoDrive.png"
+    },
+    {
+      "name": "堆糖",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DuiTang.png"
+    },
+    {
+      "name": "汽车之家",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AutoHome.png"
+    },
+    {
+      "name": "酷狗音乐",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuGou.png"
+    },
+    {
+      "name": "酷我音乐",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Kuwo.png"
+    },
+    {
+      "name": "配音秀",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DubbingShow.png"
+    },
+    {
+      "name": "京东金融",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/JDJinRong.png"
+    },
+    {
+      "name": "漫客栈",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MKZ.png"
+    },
+    {
+      "name": "腾讯动漫",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TencentComic.png"
+    },
+    {
+      "name": "快看漫画",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuaiKanComic.png"
+    },
+    {
+      "name": "哔哩哔哩漫画",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BiliComic.png"
+    },
+    {
+      "name": "支付宝",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AliPay.png"
+    },
+    {
+      "name": "磁力宅播放器",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XFuse.png"
+    },
+    {
+      "name": "中国移动",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ChinaMobile.png"
+    },
+    {
+      "name": "中国电信",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ChinaTetlcom.png"
+    },
+    {
+      "name": "中国联通",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ChinaUnicom.png"
+    },
+    {
+      "name": "爱思助手",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/i4Assistant.png"
+    },
+    {
+      "name": "Uki",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Uki.png"
+    },
+    {
+      "name": "斗鱼",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Douyu.png"
+    },
+    {
+      "name": "央视频",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YangShiPin.png"
+    },
+    {
+      "name": "爱啪思道",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Asspp.png"
+    },
+    {
+      "name": "豆瓣",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DouBan.png"
+    },
+    {
+      "name": "Talkatone",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Talkatone.png"
+    },
+    {
+      "name": "百词斩",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BaiCiZhan.png"
+    },
+    {
+      "name": "饿了么",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/eleme.png"
+    },
+    {
+      "name": "Discord",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Discord.png"
+    },
+    {
+      "name": "猫耳FM",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CatEarFM.png"
+    },
+    {
+      "name": "OKX",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/OKX.png"
+    },
+    {
+      "name": "Elk",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Elk.png"
+    },
+    {
+      "name": "PayPal",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PayPal.png"
+    },
+    {
+      "name": "OneKey",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/OneKey.png"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Instagram.png"
+    },
+    {
+      "name": "X",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/X.png"
+    },
+    {
+      "name": "Signal",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Signal.png"
+    },
+    {
+      "name": "Yealico",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Yealico.png"
+    },
+    {
+      "name": "UpNote",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/UpNote.png"
+    },
+    {
+      "name": "giffgaff",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/giffgaff.png"
+    },
+    {
+      "name": "TapTap",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TapTap.png"
+    },
+    {
+      "name": "DeepL",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DeepL.png"
+    },
+    {
+      "name": "美团外卖",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MeiTuanItakeaway.png"
+    },
+    {
+      "name": "Filen",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Filen.png"
+    },
+    {
+      "name": "彩云天气",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ColorfulClouds.png"
+    },
+    {
+      "name": "彩云天气Pro",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ColorfulCloudsPro.png"
+    },
+    {
+      "name": "Proton Calendar",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ProtonCalendar.png"
+    },
+    {
+      "name": "Proton Drive",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ProtonDrive.png"
+    },
+    {
+      "name": "Proton Mail",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ProtonMail.png"
+    },
+    {
+      "name": "Proton Pass",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ProtonPass.png"
+    },
+    {
+      "name": "Proton VPN",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ProtonVPN.png"
+    },
+    {
+      "name": "视频盒子",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AnyVideoBox.png"
+    },
+    {
+      "name": "盖得排行",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/GuideRank.png"
+    },
+    {
+      "name": "闲鱼",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FleaMarket.png"
+    },
+    {
+      "name": "拼多多",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PinDuoDuo.png"
+    },
+    {
+      "name": "网易大神",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/NetEaseGodlike.png"
+    },
+    {
+      "name": "深圳地铁",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SZMetro.png"
+    },
+    {
+      "name": "淘票票",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Taopiaopiao.png"
+    },
+    {
+      "name": "百度地图",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BaiduMap.png"
+    },
+    {
+      "name": "小蚕霸王餐",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XiaoCan.png"
+    },
+    {
+      "name": "薄荷健康",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BooHee.png"
+    },
+    {
+      "name": "脉脉",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MaiMai.png"
+    },
+    {
+      "name": "网易有道词典",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YoudaoDict.png"
+    },
+    {
+      "name": "美图秀秀",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MeiTu.png"
+    },
+    {
+      "name": "555电影",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/555DY.png"
+    },
+    {
+      "name": "天气",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AppleWeather.png"
+    },
+    {
+      "name": "1919",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/1919.png"
+    },
+    {
+      "name": "剑网三无界",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SeasunJX3.png"
+    },
+    {
+      "name": "快手",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuaiShou.png"
+    },
+    {
+      "name": "Keep",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Keep.png"
+    },
+    {
+      "name": "123云盘",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/123NetWorkDisk.png"
+    },
+    {
+      "name": "红果短剧",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PhoenixVideo.png"
+    },
+    {
+      "name": "汽水音乐",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SodaMusic.png"
+    },
+    {
+      "name": "悟空浏览器",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WukongBrowser.png"
+    },
+    {
+      "name": "美颜相机",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MeituMYXJ.png"
+    },
+    {
+      "name": "有道翻译官",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YoudaoTrans.png"
+    },
+    {
+      "name": "YY",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YY_Voice.png"
+    },
+    {
+      "name": "顺丰速运",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SF-Express.png"
+    },
+    {
+      "name": "健康160",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/91160.png"
+    },
+    {
+      "name": "掌上公交",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SouguMyBus.png"
+    },
+    {
+      "name": "快递100",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuaiDi100.png"
+    },
+    {
+      "name": "成分喵",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ChengFenMiao.png"
+    },
+    {
+      "name": "丰巢",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FC_Box.png"
+    },
+    {
+      "name": "威锋",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WPForum.png"
+    },
+    {
+      "name": "酷狗铃声",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KGRing.png"
+    },
+    {
+      "name": "WPS",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WPS.png"
+    },
+    {
+      "name": "FollowRSS",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FollowRSS.png"
+    },
+    {
+      "name": "前程无忧",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/51Job.png"
+    },
+    {
+      "name": "智联招聘",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ZhiLianZhaoPin.png"
+    },
+    {
+      "name": "美柚",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MeetYou.png"
+    },
+    {
+      "name": "阅友",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Yueyou.png"
+    },
+    {
+      "name": "河马剧场",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HMJC.png"
+    },
+    {
+      "name": "马蜂窝",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MaFengWo.png"
+    },
+    {
+      "name": "向日葵",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/OraySunlogin.png"
+    },
+    {
+      "name": "一刻相册",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BaiduPhoto.png"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MicrosoftCopilot.png"
+    },
+    {
+      "name": "Google Gemini",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/GoogleGemini.png"
+    },
+    {
+      "name": "快对",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuaiDuiZuoYe.png"
+    },
+    {
+      "name": "中华万年历",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/EtouchEcalendar.png"
+    },
+    {
+      "name": "比特球云盘",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BitqiuPan.png"
+    },
+    {
+      "name": "墨迹天气",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MojiWeather.png"
+    },
+    {
+      "name": "美食杰",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MeiShiJie.png"
+    },
+    {
+      "name": "下厨房",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XiaChuFang.png"
+    },
+    {
+      "name": "快影",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KwaiVideoeditor.png"
+    },
+    {
+      "name": "直播吧",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Zhibo8.png"
+    },
+    {
+      "name": "瑞幸咖啡",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/LuckinCoffee.png"
+    },
+    {
+      "name": "韩小圈",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HanXiaoQuan.png"
+    },
+    {
+      "name": "智慧苏州",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SuZhouCitizenCard.png"
+    },
+    {
+      "name": "粉象生活",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FenxiangLife.png"
+    },
+    {
+      "name": "催眠大师",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Hypnotist.png"
+    },
+    {
+      "name": "蜻蜓FM",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QtingFM.png"
+    },
+    {
+      "name": "懒人听书",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/LazyAudio.png"
+    },
+    {
+      "name": "番茄畅听",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/NovelFM.png"
+    },
+    {
+      "name": "飞常准",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FeeyoVeryZhunLITE.png"
+    },
+    {
+      "name": "KOOK",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KOOK.png"
+    },
+    {
+      "name": "CC直播",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CCLive.png"
+    },
+    {
+      "name": "帆书",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KebidaDushu.png"
+    },
+    {
+      "name": "携程旅行",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Ctrip.png"
+    },
+    {
+      "name": "海螺AI",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AIWanJuan.png"
+    },
+    {
+      "name": "DeepSeek",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DeepSeek.png"
+    },
+    {
+      "name": "Grok",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Grok.png"
+    },
+    {
+      "name": "Kimi",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Kimi.png"
+    },
+    {
+      "name": "Mistral AI",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MistralAI.png"
+    },
+    {
+      "name": "通义",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TongYi.png"
+    },
+    {
+      "name": "智谱清言",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ZhiPuChatGLM.png"
+    },
+    {
+      "name": "WPS文档",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WPS_Documents.png"
+    },
+    {
+      "name": "腾讯文档",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TXDocs.png"
+    },
+    {
+      "name": "小宇宙",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CosmosPodcast.png"
+    },
+    {
+      "name": "叮咚买菜",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DingdongMaicai.png"
+    },
+    {
+      "name": "Wind金融终端",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WindInfo.png"
+    },
+    {
+      "name": "波点音乐",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BodianMusic.png"
+    },
+    {
+      "name": "小店掌柜",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ShopKeeperAdmin.png"
+    },
+    {
+      "name": "有道云笔记",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YoudaoNote.png"
+    },
+    {
+      "name": "省钱快报",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YueDanBa.png"
+    },
+    {
+      "name": "挖财记账",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WaCaiJiZhang.png"
+    },
+    {
+      "name": "ZAKER",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ZAKER.png"
+    },
+    {
+      "name": "比心",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Bixin.png"
+    },
+    {
+      "name": "得间小说",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iReaderDejian.png"
+    },
+    {
+      "name": "一甜相机",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Yitian.png"
+    },
+    {
+      "name": "B612咔叽",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SnowCamera.png"
+    },
+    {
+      "name": "无他相机",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WutaCamera.png"
+    },
+    {
+      "name": "小米音箱",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XiaomiSpeaker.png"
+    },
+    {
+      "name": "Dlabel云标签",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Dlabel.png"
+    },
+    {
+      "name": "米家",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MiHome.png"
+    },
+    {
+      "name": "ReelShort",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ReelShort.png"
+    },
+    {
+      "name": "贝壳找房",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Beike.png"
+    },
+    {
+      "name": "万年历",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iReaderCityZHWNL.png"
+    },
+    {
+      "name": "Speedtest",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/OoklaSpeedtest.png"
+    },
+    {
+      "name": "看天",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Kantian.png"
+    },
+    {
+      "name": "胖乖生活",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PangguaiLife.png"
+    },
+    {
+      "name": "掌阅",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iReader.png"
+    },
+    {
+      "name": "Foodie",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Foodie.png"
+    },
+    {
+      "name": "微脉圈",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Weimai.png"
+    },
+    {
+      "name": "TeraBox",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TeraBox.png"
+    },
+    {
+      "name": "大麦",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Damai.png"
+    },
+    {
+      "name": "掌上英雄联盟",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/LOL_Bible.png"
+    },
+    {
+      "name": "掌上无畏契约",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ValorantBible.png"
+    },
+    {
+      "name": "掌上穿越火线",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CF_Bible.png"
+    },
+    {
+      "name": "王者营地",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HonorOfKingsGameHelper.png"
+    },
+    {
+      "name": "和平营地",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PUBGMHD_Bible.png"
+    },
+    {
+      "name": "米游社",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/miHoYoBBS.png"
+    },
+    {
+      "name": "美丽修行",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Meizhixiuxing.png"
+    },
+    {
+      "name": "库街区",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuroBBS.png"
+    },
+    {
+      "name": "YY语音",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YYVoiceTool.png"
+    },
+    {
+      "name": "Oopz",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Oopz.png"
+    },
+    {
+      "name": "豆瓣阅读",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DoubanRead.png"
+    },
+    {
+      "name": "飞猪旅行",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TaobaoTravel.png"
+    },
+    {
+      "name": "京东外卖",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/JDWaimai.png"
+    },
+    {
+      "name": "人人追剧",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/EveryoneVideo.png"
+    },
+    {
+      "name": "DREAME",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DREAME.png"
+    },
+    {
+      "name": "得物",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Dewu.png"
+    },
+    {
+      "name": "最美壁纸",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BestWall.png"
+    },
+    {
+      "name": "百度文库",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BaiduWenku.png"
+    },
+    {
+      "name": "萝卜快跑",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/RoboTaxi.png"
+    },
+    {
+      "name": "滴答出行",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DidaPincheTaxi.png"
+    },
+    {
+      "name": "小桔充电",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XiaojukejiCharge.png"
+    },
+    {
+      "name": "特来电",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/GotoCharge.png"
+    },
+    {
+      "name": "RQrun",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/RQrun.png"
+    },
+    {
+      "name": "DigitalHeartbeat",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DigitalHeartbeat.png"
+    },
+    {
+      "name": "夸克扫描王",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QuarkScanking.png"
+    },
+    {
+      "name": "智行火车票",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ZhixingHC.png"
+    },
+    {
+      "name": "萌娘百科",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MoeGirlWiki.png"
+    },
+    {
+      "name": "触站",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Chuzhan.png"
+    },
+    {
+      "name": "图怪兽",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TuGuaiShou.png"
+    },
+    {
+      "name": "Roborock",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Roborock.png"
+    },
+    {
+      "name": "酷狗概念版",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuGouYouth.png"
+    },
+    {
+      "name": "云鲸智能",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/NarwelRobots.png"
+    },
+    {
+      "name": "ECOVACS HOME",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/EcovacsHome.png"
+    },
+    {
+      "name": "医考帮",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YiKaoBang.png"
+    },
+    {
+      "name": "盒马",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MrHema.png"
+    },
+    {
+      "name": "Tumblr",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Tumblr.png"
+    },
+    {
+      "name": "小睡眠",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HeartideBrainWave.png"
+    },
+    {
+      "name": "纷玩岛",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/LiveLab.png"
+    },
+    {
+      "name": "Pinterest",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Pinterest.png"
+    },
+    {
+      "name": "完美世界电竞",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PerfectWorldEsport.png"
+    },
+    {
+      "name": "华尔街见闻",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FinanceNews.png"
+    },
+    {
+      "name": "金十数据",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Jin10Data.png"
+    },
+    {
+      "name": "他趣",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Taqu.png"
+    },
+    {
+      "name": "财联社",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CaiLianShe.png"
+    },
+    {
+      "name": "36氪",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/36Kr.png"
+    },
+    {
+      "name": "虎嗅",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Huxiu.png"
+    },
+    {
+      "name": "两步路户外助手",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/2bulu.png"
+    },
+    {
+      "name": "行者户外",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/OnTheWay.png"
+    },
+    {
+      "name": "蜗牛睡眠",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SnailSleep.png"
+    },
+    {
+      "name": "陌陌",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MOMO.png"
+    },
+    {
+      "name": "南网在线",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CSG.png"
+    },
+    {
+      "name": "测测",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Cece.png"
+    },
+    {
+      "name": "沃尔玛",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Walmart.png"
+    },
+    {
+      "name": "摩天轮",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FerrisWheel.png"
+    },
+    {
+      "name": "华住会",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HantingHotels.png"
+    },
+    {
+      "name": "Hong Kong Toolbar",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HongKongToolbar.png"
+    },
+    {
+      "name": "超级课程表",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MyFriday.png"
+    },
+    {
+      "name": "天猫校园",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TmallCampus.png"
+    },
+    {
+      "name": "学习通",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ChaoXingStudy.png"
+    },
+    {
+      "name": "天气预报",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iReaderCityWeather.png"
+    },
+    {
+      "name": "中国天气",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WeatherChina.png"
+    },
+    {
+      "name": "百度翻译",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BaiduTranslate.png"
+    },
+    {
+      "name": "天天跳绳",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CrazyRope.png"
+    },
+    {
+      "name": "凤凰新闻",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ifengNews.png"
+    },
+    {
+      "name": "WakeUp课程表",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WakeupSchedule.png"
+    },
+    {
+      "name": "慧生活798",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SmartLife.png"
+    },
+    {
+      "name": "易校园",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YiSchool.png"
+    },
+    {
+      "name": "排班日历",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AxWorkSchedule.png"
+    },
+    {
+      "name": "e充电",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/EasyCharge.png"
+    },
+    {
+      "name": "看家王",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ChatCam.png"
+    },
+    {
+      "name": "天气通",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TianQiTong.png"
+    },
+    {
+      "name": "每日赛车",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MeiRiSaiChe.png"
+    },
+    {
+      "name": "大姨妈月经期助手",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Dayima.png"
+    },
+    {
+      "name": "小白智慧打印",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XiaobaiPrint.png"
+    },
+    {
+      "name": "海雀",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AlcidaeVideo.png"
+    },
+    {
+      "name": "创维智慧云",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SkyworthDigitalPicamera.png"
+    },
+    {
+      "name": "OKOK",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/OKOK.png"
+    },
+    {
+      "name": "车来了",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Chelaile.png"
+    },
+    {
+      "name": "好轻",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YunmaiScale.png"
+    },
+    {
+      "name": "多屏互动",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TCLnScreen.png"
+    },
+    {
+      "name": "马克水印相机",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/marki.png"
+    },
+    {
+      "name": "联掌门户",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/LZMH.png"
+    },
+    {
+      "name": "Sofascore",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Sofascore.png"
+    },
+    {
+      "name": "DJ多多",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/DjDuoDuo.png"
+    },
+    {
+      "name": "摩托范",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/MotorFans.png"
+    },
+    {
+      "name": "5EPlay",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/5EPlay.png"
+    },
+    {
+      "name": "微店",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Weidian.png"
+    },
+    {
+      "name": "亲宝宝",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Qbb.png"
+    },
+    {
+      "name": "新浪财经",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SinaStock.png"
+    },
+    {
+      "name": "PICOOC",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PICOOC.png"
+    },
+    {
+      "name": "口袋壁纸",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ShoujiDesk.png"
+    },
+    {
+      "name": "闪动校园",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ShandongSchool.png"
+    },
+    {
+      "name": "RevenueCat",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/RevenueCat.png"
+    },
+    {
+      "name": "腾讯广告",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TencentAd.png"
+    },
+    {
+      "name": "字节跳动广告",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/ByteDanceAd.png"
+    },
+    {
+      "name": "App Store",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AppStore.png"
+    },
+    {
+      "name": "BoxJS",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/BoxJS.png"
+    },
+    {
+      "name": "DNS防泄露",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Prevent_DNS_Leaks.png"
+    },
+    {
+      "name": "HTTPDNS",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/HTTPDNS.png"
+    },
+    {
+      "name": "节点检测工具",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Node_detection_tool.png"
+    },
+    {
+      "name": "Script-Hub",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Script-Hub.png"
+    },
+    {
+      "name": "Sub-Store",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Sub-Store.png"
+    },
+    {
+      "name": "Switch",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Switch.png"
+    },
+    {
+      "name": "可莉",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KeLee.png"
+    },
+    {
+      "name": "广告拦截",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/RemoveAds.png"
+    },
+    {
+      "name": "远程资源转换器",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/RemoteResourceConverter.png"
+    },
+    {
+      "name": "银行",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Bank.png"
+    },
+    {
+      "name": "WebDAV",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WebDAV.png"
+    },
+    {
+      "name": "IPATool",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/IPATool.png"
+    },
+    {
+      "name": "FotMob",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/FotMob.jpg"
+    },
+    {
+      "name": "Initium_Media_logo",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Initium_Media_logo.png"
+    },
+    {
+      "name": "Jump",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Jump.png"
+    },
+    {
+      "name": "Stack",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Stack.png"
+    },
+    {
+      "name": "Wacai",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Wacai.png"
+    },
+    {
+      "name": "iWallBiZhi",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iWallBiZhi.png"
+    },
+    {
+      "name": "icon_Avatar",
+      "url": "https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/icon_Avatar.png"
+    }
+  ]
+}

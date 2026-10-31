@@ -2011,19 +2011,19 @@ function getModInfo(x) {
   //console.log(key)
 }
 
-//获取可莉图标集
+//获取图标集
 async function getIcon(icon) {
-  let url = 'https://raw.githubusercontent.com/luestr/IconResource/main/KeLee_icon.json'
-  let kicon = $.getjson('Parser_Kelee_icon')
+  let url = 'https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/iOSRules.json'
+  let kicon = $.getjson('Parser_iOSRules_icon')
   if (!kicon) {
     kicon = $.toObj((await http(url)).body)['icons']
-    $.setjson(kicon, 'Parser_Kelee_icon')
+    $.setjson(kicon, 'Parser_iOSRules_icon')
   }
   for (let i = 0; i < kicon.length; i++) {
     if (kicon[i].name == icon) return kicon[i].url
   }
   kicon = $.toObj((await http(url)).body)['icons']
-  $.setjson(kicon, 'Parser_Kelee_icon')
+  $.setjson(kicon, 'Parser_iOSRules_icon')
   for (let i = 0; i < kicon.length; i++) {
     if (kicon[i].name == icon) return kicon[i].url
   }

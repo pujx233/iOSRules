@@ -2,11 +2,6 @@
 
 [Loon](Loon/) · [Stash](Stash/) · [Quantumult X](QuantumultX/) · [Script](Script/) · [Icon](Icon/) · [Pic](Pic/)
 
-Loon 知乎使用 [ZhihuLite.js](Script/ZhihuLite.js) 自用版本；FotMob 为纯原生规则。
-哔哩哔哩使用[本仓库入口](Loon/Bilibili_remove_ads.lpx)，使用[本地兼容脚本](Script/Bilibili/)，空降默认关闭，9.17.0 及以上自动跳过空降处理。
-保留原作者署名；署名与来源注释不代表仍从原站下载脚本。
-`Script/Kelee/` 保存脚本来源备份，`Script/Upstream/` 按原作者、仓库和路径存放其他来源，分别供对应配置引用。
-
 ## Loon
 
 | 插件 | 一键导入 Loon | 文件 | 脚本 |
@@ -136,7 +131,7 @@ Loon 知乎使用 [ZhihuLite.js](Script/ZhihuLite.js) 自用版本；FotMob 为�
 | 通用广告过滤器 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FRemove_ads_by_keli.lpx) | [LPX](Loon/Remove_ads_by_keli.lpx) | — |
 | 风鸟去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FRiskBird_remove_ads.lpx) | [LPX](Loon/RiskBird_remove_ads.lpx) | [RiskBird_remove_ads.js](Script/Kelee/RiskBird_remove_ads.js) |
 | 360智慧生活去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FSafetyHome_remove_ads.lpx) | [LPX](Loon/SafetyHome_remove_ads.lpx) | — |
-| Script-Hub | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FScript-Hub.lpx) | [LPX](Loon/Script-Hub.lpx) | [Rewrite-Parser.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/Rewrite-Parser.js) · [rule-parser.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js) · [script-converter.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js) · [script-hub.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js) |
+| Script-Hub | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FScript-Hub.lpx) | [LPX](Loon/Script-Hub.lpx) | [Rewrite-Parser.js](Script/Kelee/Rewrite-Parser.js) · [rule-parser.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/rule-parser.js) · [script-converter.js](https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js) · [script-hub.js](Script/Kelee/script-hub.js) |
 | 剑网三无界去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FSeasunJX3_remove_ads.lpx) | [LPX](Loon/SeasunJX3_remove_ads.lpx) | — |
 | 七猫小说去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FSevenCat_remove_ads.lpx) | [LPX](Loon/SevenCat_remove_ads.lpx) | — |
 | 顺丰速运去广告 | [导入](https://www.nsloon.com/openloon/import?plugin=https%3A%2F%2Fraw.githubusercontent.com%2Fpujx233%2FiOSRules%2Fmain%2FLoon%2FSF-Express_remove_ads.lpx) | [LPX](Loon/SF-Express_remove_ads.lpx) | — |
