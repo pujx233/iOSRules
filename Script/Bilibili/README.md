@@ -9,5 +9,3 @@
 - 使用 `te: trailers` 判断是否需要补充 `grpc-status`，保留已有 HTTP/2 trailers。
 
 来源：[Sparkle](https://github.com/kokoryh/Sparkle)、[10 月 7 日兼容更新](https://github.com/kokoryh/Sparkle/commit/290bcbdd2f158cdd8f7db9c996e90fe63490e16f)、[9.17.0 验签变更](https://github.com/kokoryh/Sparkle/commit/0c3bc09b498e90ca08ac22ca855800c7d35154c1)。本版本不启用会改变播放历史的新版空降备用方案。
-
-本地验证：`node --test Script/Bilibili/test.cjs`。
