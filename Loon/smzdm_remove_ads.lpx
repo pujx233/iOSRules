@@ -1,7 +1,7 @@
 #!name=什么值得买去广告
 #!desc=移除开屏广告、信息流广告、各类横幅广告、搜索页广告、文章内广告，移除活动皮肤、精简我的页面。
 #!openUrl=https://apps.apple.com/app/id518213356
-#!author=可莉🅥
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag=去广告
 #!system=
 #!system_version=
@@ -20,6 +20,7 @@ response if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/util\/update$/i then resp
 
 response if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/util\/update$/i then response.json.delete(["data.silence_local_push_msg", "data.video_cache_num_configs", "data.haojia_widget", "data.widget", "data.operation_float"])
 
+response if ${url} ~= /^https:\/\/app-api\.smzdm\.com\/util\/update$/i then response.json.jq("def r: if type==\"object\" then if has(\"ad_campaign_name\") and (.ad_campaign_name|type==\"string\") and (.ad_campaign_name|test(\"\\\\S\")) then empty else . end elif type==\"array\" then map(r) else . end; .data.operation_float |= map(map(r))")
 
 response if ${url} ~= /^https:\/\/homepage-api\.smzdm\.com\/v3\/home\?/i then response.json.jq_file("https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/JQLang/smzdm/home_smzdm_remove_ads.jq")
 

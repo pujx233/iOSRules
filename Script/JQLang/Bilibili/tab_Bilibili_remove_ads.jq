@@ -1,6 +1,13 @@
 .data.tab = [
     {
         pos: 1,
+        id: 731,
+        name: "直播",
+        tab_id: "直播tab",
+        uri: "bilibili://live/home"
+    },
+    {
+        pos: 2,
         id: 477,
         name: "推荐",
         tab_id: "推荐tab",
@@ -8,32 +15,25 @@
         default_selected: 1
     },
     {
-        pos: 2,
+        pos: 3,
         id: 478,
         name: "热门",
         tab_id: "热门tab",
         uri: "bilibili://pegasus/hottopic"
     },
     {
-        pos: 3,
-        id: 545,
+        pos: 4,
+        id: 3502,
         name: "动画",
         tab_id: "bangumi",
-        uri: "bilibili://pgc/home"
-    },
-    {
-        pos: 4,
-        id: 151,
-        name: "影视",
-        tab_id: "film",
-        uri: "bilibili://pgc/cinema-tab"
+        uri: "bilibili://pgc/bangumi_v2"
     },
     {
         pos: 5,
-        id: 731,
-        name: "直播",
-        tab_id: "直播tab",
-        uri: "bilibili://live/home"
+        id: 3503,
+        name: "影视",
+        tab_id: "film",
+        uri: "bilibili://pgc/cinema_v2"
     }
 ] | 
 .data.top = [
@@ -41,7 +41,7 @@
         pos: 1,
         id: 176,
         name: "消息",
-        tab_id: "消息Top",
+        tab_id: "消息top",
         uri: "bilibili://link/im_home",
         icon: "http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png"
     }
@@ -69,10 +69,9 @@
         pos: 5,
         id: 181,
         name: "我的",
-        tab_id: "我的Bottom",
+        tab_id: "我的bottom",
         uri: "bilibili://user_center/",
         icon: "http://i0.hdslb.com/bfs/archive/4b0b2c49ffeb4f0c2e6a4cceebeef0aab1c53fe1.png",
         icon_selected: "http://i0.hdslb.com/bfs/archive/a54a8009116cb896e64ef14dcf50e5cade401e00.png"
     }
 ]
-

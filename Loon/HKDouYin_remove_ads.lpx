@@ -1,7 +1,7 @@
 #!name=香港抖音去广告
 #!desc=精简左右侧边栏、移除底栏切换，其余内容后续再完善。
 #!openUrl=https://apps.apple.com/app/id1142110895
-#!author=可莉🅥
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag=去广告
 #!system=
 #!system_version=
@@ -34,4 +34,4 @@ response if ${url} ~= /^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)
 response if ${url} ~= /^https:\/\/(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)\/tfe\/api\/request_combine\/v1\/\?need_personal_recommend/i then response.json.replace(["data[\"/service/settings/v3/\"].body.data.settings.homepage_two_session_tab_skin_2025", "data[\"/service/settings/v3/\"].body.data.settings.homepage_tab_skin_enable"], [false, false])
 
 [MitM]
-hostname=aweme.snssdk.com, api5-normal-m.amemv.com, api5-normal-lq.amemv.com, zlink.ugsdk.cn
+hostname=aweme.snssdk.com, api5-normal-m.amemv.com

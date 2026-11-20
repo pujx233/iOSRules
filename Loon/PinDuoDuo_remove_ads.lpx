@@ -1,7 +1,7 @@
 #!name=拼多多去广告
 #!desc=移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。
 #!openUrl=https://apps.apple.com/app/id1044283059
-#!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥
+#!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag=去广告
 #!system=
 #!system_version=
@@ -17,6 +17,7 @@ AND, ((DOMAIN, api.pinduoduo.com), (PROTOCOL, QUIC)), REJECT
 DOMAIN, titan.pinduoduo.com, REJECT
 DOMAIN, xg.pinduoduo.com, REJECT
 DOMAIN, cdl-1.pddpic.com, REJECT
+DOMAIN, titan.pinduoduo.com, REJECT
 DOMAIN, cdl-p2.pddpic.com, REJECT
 DOMAIN, cd-1.pddpic.com, REJECT
 DOMAIN, apm.pinduoduo.com, REJECT

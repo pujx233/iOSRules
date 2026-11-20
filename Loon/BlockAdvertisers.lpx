@@ -1,7 +1,7 @@
 #!name=广告平台拦截器
 #!desc=此插件是所有去广告插件的依赖，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、芒拓网络、上海领页、神蓍科技、酷盈、凡提科技、亿帆、作业帮、畅行未来、华夏乐游、邑维、趣小猫、极准网络、元气智广、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine、Amazon、Skarb、Amplitude、ToBid、UMS等广告平台的广告请求，更适合iOS平台的应用。
 #!openUrl=
-#!author=可莉🅥
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag=去广告, 依赖
 #!system=
 #!system_version=
@@ -64,6 +64,7 @@ DOMAIN-SUFFIX, appsad.cn, REJECT
 DOMAIN-SUFFIX, beizi.biz, REJECT
 DOMAIN-SUFFIX, ad-scope.com.cn, REJECT
 DOMAIN-SUFFIX, adn-plus.com.cn, REJECT
+DOMAIN-SUFFIX, beizi.biz, REJECT
 DOMAIN-SUFFIX, adhub.com.cn, REJECT
 DOMAIN-SUFFIX, adnplus.com.cn, REJECT
 DOMAIN-SUFFIX, adscope.com.cn, REJECT
@@ -108,6 +109,7 @@ DOMAIN, mobads.baidu.com, REJECT
 DOMAIN, nadvideo2.baidu.com, REJECT
 DOMAIN, wn.pos.baidu.com, REJECT
 DOMAIN, miniapp-ad.cdn.bcebos.com, REJECT
+DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
 DOMAIN, hm.baidu.com, REJECT
 DOMAIN, dlswbr.baidu.com, REJECT
 DOMAIN, miao.baidu.com, REJECT
@@ -137,6 +139,7 @@ DOMAIN, tmeadcomm.y.qq.com, REJECT
 DOMAIN, tpns.qq.com, REJECT
 DOMAIN, wup.imtt.qq.com, REJECT
 DOMAIN, tpstelemetry.tencent.com, REJECT
+DOMAIN, otheve.beacon.qq.com, REJECT
 DOMAIN, stat.y.qq.com, REJECT
 DOMAIN, stat6.y.qq.com, REJECT
 DOMAIN, oth.str.mdt.qq.com, REJECT
@@ -190,6 +193,7 @@ DOMAIN-SUFFIX, rhinokeen.com, REJECT
 DOMAIN-SUFFIX, lydaas.com, REJECT
 DOMAIN-SUFFIX, xixikf.com, REJECT
 DOMAIN-SUFFIX, wrating.com, REJECT
+DOMAIN-SUFFIX, puata.info, REJECT
 DOMAIN-SUFFIX, mobmore.com, REJECT
 DOMAIN-SUFFIX, um0.cn, REJECT
 DOMAIN-SUFFIX, umv0.com, REJECT
@@ -198,13 +202,18 @@ DOMAIN-SUFFIX, eshiqi.com, REJECT
 DOMAIN-SUFFIX, umv5.com, REJECT
 DOMAIN-SUFFIX, dratio.com, REJECT
 DOMAIN-SUFFIX, umtrack0.com, REJECT
+DOMAIN-SUFFIX, uyunad.com, REJECT
 DOMAIN-SUFFIX, whalecloud.com, REJECT
 DOMAIN-SUFFIX, umtrack2.com, REJECT
 DOMAIN-SUFFIX, umengcloud.com, REJECT
+DOMAIN-SUFFIX, umeng.com, REJECT
+DOMAIN-SUFFIX, umtrack.com, REJECT
 DOMAIN-SUFFIX, um1.cn, REJECT
+DOMAIN-SUFFIX, umsns.com, REJECT
 
 DOMAIN-SUFFIX, adfunlink.com, REJECT
 
+DOMAIN-SUFFIX, tianmu.mobi, REJECT
 
 DOMAIN-SUFFIX, ubixioe.com, REJECT
 
@@ -241,6 +250,7 @@ DOMAIN-SUFFIX, iytcdn.com, REJECT
 
 DOMAIN, huichuan.sm.cn, REJECT
 DOMAIN, huichuan-mc.sm.cn, REJECT
+DOMAIN, api.sm.cn, REJECT
 
 DOMAIN, nex.163.com, REJECT
 DOMAIN, iad.g.163.com, REJECT
@@ -295,7 +305,10 @@ DOMAIN-SUFFIX, lnk0.com, REJECT
 DOMAIN-SUFFIX, bridgeoos.com, REJECT
 DOMAIN-SUFFIX, anythinktech.com, REJECT
 DOMAIN-SUFFIX, birdgesdk.com, REJECT
+DOMAIN-SUFFIX, toponadss.com, REJECT
+DOMAIN-SUFFIX, bridgeoos.com, REJECT
 DOMAIN-SUFFIX, anyrtb.com, REJECT
+DOMAIN-SUFFIX, anythinktech.com, REJECT
 DOMAIN-SUFFIX, combocn.com, REJECT
 
 DOMAIN-SUFFIX, beanxin.com, REJECT
@@ -333,6 +346,7 @@ DOMAIN-SUFFIX, googlesyndication-cn.com, REJECT
 
 DOMAIN-SUFFIX, xinduoad.com, REJECT
 
+DOMAIN-SUFFIX, kuaiyiad.com, REJECT
 
 DOMAIN, statis.miwuad.com, REJECT
 
@@ -340,6 +354,7 @@ DOMAIN-SUFFIX, sigmob.cn, REJECT
 
 DOMAIN-SUFFIX, richmob.cn, REJECT
 
+DOMAIN-SUFFIX, 66mobi.com, REJECT
 
 DOMAIN, ad.shunchangzhixing.com, REJECT
 DOMAIN, redirect.shunchangzhixing.com, REJECT
@@ -358,6 +373,7 @@ DOMAIN-SUFFIX, bxsnews.com, REJECT
 
 DOMAIN-SUFFIX, ranfenghd.com, REJECT
 
+DOMAIN-SUFFIX, miaozhen.com, REJECT
 
 DOMAIN-SUFFIX, qchannel01.cn, REJECT
 
