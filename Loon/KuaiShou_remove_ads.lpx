@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/KuaiShou_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/KuaiShou.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/(apissl|az\d-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\?/i then response.json.delete(["reskinConfig", "sidebarExSquareStyle.moreList", "sidebarExSquareStyle.topList"])

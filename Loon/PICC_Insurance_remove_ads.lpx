@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/PICC_Insurance_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/PICC_Insurance.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 request if ${url} ~= /^https:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/h\/headlines\/queryHeadlines/i then reject(404)

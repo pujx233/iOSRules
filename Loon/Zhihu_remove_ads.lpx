@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/Zhihu_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Zhihu.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\?/i then response.json.jq("def drop_keys: {\"km_httpdns_new_config_tars\":true,\"preFetchHttpDns\":true,\"httpdns_detector_use_concurrent\":true,\"httpdns_use_memory_cache\":true,\"httpdns_new_config_tars\":true,\"coreNetworkConf_useTars\":true,\"km_coreNetworkConf_useTars\":true,\"sugarQuicConfig\":true,\"quic_dns_detect_enable\":true,\"quicMixAB\":true,\"quic_downgrade_enable\":true,\"quic_priority_strategy\":true,\"quic_check_health_enable\":true,\"tquic_configuration\":true,\"networkExprimentList\":true,\"tars_ab_list\":true,\"zaSetExtraRequestHeader\":true}; .data.configs |= map(select((drop_keys[.configKey] // false) | not) | if (.configValue | type) == \"object\" then del(.configValue.delayHttpdns, .configValue.dnsParser, .configValue.HTTPDNS) else . end)")

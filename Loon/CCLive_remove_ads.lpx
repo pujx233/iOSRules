@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/CCLive_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/CCLive.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/api\.cc\.163\.com\/v\d\/mgamenavigation\/navigation_list\?/i then response.json.jq(".data.info_list |= map(select(.name == \"关注\" or .name == \"推荐\" or .name == \"视频\" or .name == \"全部\"))")

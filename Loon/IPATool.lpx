@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/IPATool.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/IPATool.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Script]
 request if ${url} ~= /^https:\/\/apple-api\.com/i then script("https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/Kelee/AppStoreAPI.js") with tag="App Store API", requires_body=true

@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/AppleWeatherEnhancer.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/AppleWeather.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Argument]
 Weather.Provider=select, "ColorfulClouds", "WeatherKit", "QWeather", tag=[天气]数据源, desc=使用选定的数据源替换天气数据。

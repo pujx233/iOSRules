@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/TelegramRedirect.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Telegram.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Argument]
 app=select, "tg", "sg", "turrit", "ime", "ng", "lingo", tag=客户端, desc=指定跳转的客户端

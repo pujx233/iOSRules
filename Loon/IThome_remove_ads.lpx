@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/IThome_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/IThome.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Argument]
 removePinnedArticles = switch, false, true, tag=移除置顶文章, desc=启用后将移除置顶文章

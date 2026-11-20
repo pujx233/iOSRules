@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/WARP_Node_Query.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/1.1.1.1.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Script]
 generic then script("https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/Kelee/1.1.1.1.panel.js") with tag="WARP · INFO", img_url="icloud.circle.system", timeout=10

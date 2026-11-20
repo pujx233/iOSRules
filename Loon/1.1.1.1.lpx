@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/1.1.1.1.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/1.1.1.1.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Script]
 request if ${url} ~= /^https?:\/\/(api|zero-trust-client)\.cloudflareclient\.com\/(.*)\/reg\/[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i then script("https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/Kelee/1.1.1.1.request.js") with tag="WARP Personal Request", requires_body=true

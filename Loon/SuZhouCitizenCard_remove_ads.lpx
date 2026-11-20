@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/SuZhouCitizenCard_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SuZhouCitizenCard.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https?:\/\/newapp2\.szsmk\.com\/app\/config\/queryMainAd/i then response.body.mock("json", "{\"message\":\"操作成功\",\"main_ad_list\":[],\"code\":\"000000\"}")

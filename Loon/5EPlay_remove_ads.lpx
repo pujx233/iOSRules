@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/5EPlay_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/5EPlay.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/app\.5eplay\.com\/api\/app\/dync_config\?/i then response.json.delete(["data.function_configs.startup_ad_switch", "data.function_configs.startup_ad_timeout", "data.function_configs.startup_ad_day_max", "data.function_configs.app_bar_guide_width", "data.function_configs.app_bar_guide_height", "data.function_configs.app_bar_guide_url", "data.function_configs.app_bar_guide_time", "data.function_configs.home_tab_event_tag", "data.function_configs.home_tab_event_tag_ext", "data.function_configs.home_tab_player_tag", "data.function_configs.home_tab_player_tag_ext", "data.function_configs.task_center_entrance", "data.function_configs.store_go", "data.function_configs.wall_closed"])

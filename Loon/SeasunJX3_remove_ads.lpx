@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/SeasunJX3_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SeasunJX3.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [General]
 real-ip=*-update.xoyocdn.com, xg-flow.xoyo.com

@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/Spotify_lyrics_translation.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Spotify.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Script]
 response if ${url} ~= /^https?:\/\/api\.spotify\.com\/v1\/tracks\?/i then script("https://raw.githubusercontent.com/pujx233/iOSRules/main/Script/Kelee/Spotify_response.js") with tag="跟踪响应·JSON", requires_body=true

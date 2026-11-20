@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/QiDian_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/QiDian.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$/i then response.json.replace(["Data.WolfEye", "Data.CloudSetting.TeenShowFreq"], [0, 0])

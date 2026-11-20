@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/LuckinCoffee_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/LuckinCoffee.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 request if ${url} ~= /^https:\/\/capi\.lkcoffee\.com\/resource\/m\/growUp\/calendarList/i then reject(404)

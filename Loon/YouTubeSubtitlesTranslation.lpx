@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/YouTubeSubtitlesTranslation.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/YouTube.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Argument]
 Type=select, "Official", "Translate", tag=字幕类型, desc=请选择要使用的字幕，双语字幕将使用您选择类型呈现。

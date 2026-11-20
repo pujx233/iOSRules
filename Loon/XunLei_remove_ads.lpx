@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/XunLei_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/XunLei.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/conf-m-ssl\.xunlei\.com\/external\//i then response.json.delete(["values.me_config.entrance_list_vertical_enable", "values.me_config.common_service_list", "values.me_config.banner_service_list"])

@@ -8,7 +8,7 @@
 #!loon_version=3.4.0(962)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/Amap_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/Amap.png
-#!date=2026-10-20 12:06:08
+#!date=2026-11-21
 
 [Rewrite]
 request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?/i then reject_dict(200)

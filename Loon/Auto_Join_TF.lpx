@@ -9,7 +9,7 @@
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/Auto_Join_TF.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/TestFlight.png
 #!input=App_ID
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Argument]
 CaptureAccountToken=switch, false, true, tag=捕获账号令牌, desc=此开关控制插件是否捕获账户令牌 

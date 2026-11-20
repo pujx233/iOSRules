@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/WutaCamera_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/WutaCamera.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/api-release\.wuta-cam\.com\/ad_tree$/i then response.json.delete(["regular.splash", "big_day", "big_day_overrides", "regular.home_bottom_right_entry_v2", "regular.pic_upload_alert", "regular.retouching_before_icon"])

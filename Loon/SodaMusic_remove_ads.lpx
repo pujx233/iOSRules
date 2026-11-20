@@ -8,7 +8,7 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://github.com/pujx233/iOSRules/blob/main/Loon/SodaMusic_remove_ads.lpx
 #!icon=https://raw.githubusercontent.com/pujx233/iOSRules/main/Icon/SodaMusic.png
-#!date=2026-10-02 13:57:49
+#!date=2026-11-21
 
 [Rewrite]
 response if ${url} ~= /^https:\/\/tnc\d-(bjlgy|ali[a-z]{2})\d?\.zijieapi\.com\/get_domains\/v\d\/\?/i then response.json.replace(["data.opaque_data_enabled", "data.ttnet_http_dns_enabled", "data.ttnet_quic_enabled", "data.ttnet_tt_http_dns"], [0, 0, 0, 0])
